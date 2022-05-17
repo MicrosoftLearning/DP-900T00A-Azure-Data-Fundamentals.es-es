@@ -1,17 +1,15 @@
 ---
 lab:
-    title: 'Laboratorio 3: Aprovisionamiento de servicios de datos no relacionales de Azure'
-    module: 'Módulo 3: Exploración de datos no relacionales en Azure'
+  title: 'Laboratorio 03: Aprovisionamiento de servicios de datos no relacionales de Azure'
+  module: 'Module 03: Explore non-relational data in Azure'
+ms.openlocfilehash: b5f4fd9fbe05bcea6cd640a59e45eab50a5f3e05
+ms.sourcegitcommit: 32d1de2c37267f8d3cedb0f0064b08be2cde5bb7
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/04/2022
+ms.locfileid: "139267714"
 ---
+## <a name="instructions"></a>Instrucciones
+En este ejercicio, explorará las formas en que se puede usar Azure Storage como almacén de datos no relacionales
 
-## Instrucciones
-En el escenario de ejemplo, ha decidido crear los siguientes almacenes de datos:
-
-* Una Cosmos DB para almacenar información sobre el volumen de artículos en existencia. Necesita almacenar información actual e histórica sobre los niveles de volumen, para poder realizar un seguimiento de cómo los niveles varían con el tiempo. Los datos se registran diariamente.
-* Una Data Lake Store para almacenar datos de producción y calidad.
-* Un contenedor de blob para contener imágenes de los productos que fabrica la compañía.
-* Almacenamiento de archivos para compartir informes.
-
-En este laboratorio, aprovisionará y configurará la cuenta de Cosmos DB. Para probarla, creará una base de datos, un contenedor y un documento de ejemplo. También aprovisionará una cuenta de Azure Storage que puede proporcionar almacenamiento de blobs, archivos y Data Lake.
-
-1.	Vaya al ejercicio de Microsoft Learn en https://aka.ms/dp900lab03-spa y complete la unidad en el navegador: 
+1.  Vaya al ejercicio de Microsoft Learn en https://docs.microsoft.com/learn/modules/explore-provision-deploy-non-relational-data-services-azure/6-exercise-azure-storage y complete la unidad en el explorador: 

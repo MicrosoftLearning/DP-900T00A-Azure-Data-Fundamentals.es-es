@@ -1,15 +1,24 @@
-# Diseño del laboratorio para entrenadores de DP-900
+---
+ms.openlocfilehash: d886b438a93762235ecd051230f873dae1b674ce
+ms.sourcegitcommit: 1117342052bce0bbd5a703bd1f763862b9129807
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "140682443"
+---
+# <a name="dp-900-trainer-lab-mapping"></a>Diseño del laboratorio para entrenadores de DP-900
 
-El curso DP-900: Conceptos básicos de Microsoft Azure Data, cuenta con un conjunto de laboratorios designados para el aprendizaje impartido por instructor. 
+El curso DP-900: Fundamentos de datos de Microsoft Azure tiene un conjunto de laboratorios diseñados para el aprendizaje dirigido por instructores. 
 
-> Nota: Los instructores pueden pedir a los estudiantes que completen uno o más laboratorios a su propio ritmo mediante los ejercicios en las rutas de aprendizaje de Learn (https://docs.microsoft.com/users/23110622/collections/0kjyh8rn5gdrjj). 
+> Nota: Los instructores pueden elegir pedir a los alumnos que completen uno o varios laboratorios por su cuenta mediante los ejercicios de las rutas de aprendizaje de Learn asociadas (https://docs.microsoft.com/users/23110622/collections/0kjyh8rn5gdrjj). 
 
-## Asignación del módulo de DP-900 a los laboratorios
+## <a name="dp-900-module-mapping-to-labs"></a>Asignación del módulo de DP-900 a los laboratorios
 
-| Laboratorio para entrenadores de DP-900 | Tema | Archivo de marcado |
+| Módulo | Laboratorio | Archivo de marcado |
 | --- | --- | --- |
-| 01: Módulo 2 de DP-900 | Aprovisionamiento de servicios de datos relacionales de Azure | [01-Provision-Azure-relational-database-services.md](https://github.com/MicrosoftLearning/DP-900ES-Microsoft-Azure-Data-Fundamentals/blob/master/Instructions/01-Provision-Azure-relational-database-services.md) |
-| 02: Módulo 2 de DP-900 | Uso de SQL para consultar Azure SQL Database | [02-Use-SQL-to-query-Azure-SQL-Database.md](https://github.com/MicrosoftLearning/DP-900ES-Microsoft-Azure-Data-Fundamentals/blob/master/Instructions/02-Use-SQL-to-query-Azure-SQL-Database.md) |
-| 03: Módulo 3 de DP-900 | Aprovisionamiento de servicios de datos no relacionales de Azure  | [03-Provision-non-relational-Azure-data-services.md](https://github.com/MicrosoftLearning/DP-900ES-Microsoft-Azure-Data-Fundamentals/blob/master/Instructions/03-Provision-non-relational-Azure-data-services.md) |
-| 04: Módulo 3 de DP-900 | Carga, descarga y consulta de datos en un almacén de datos no relacional | [04-Upload-download-and-query-data-in-a-non-relational-data-store.md](https://github.com/MicrosoftLearning/DP-900ES-Microsoft-Azure-Data-Fundamentals/blob/master/Instructions/04-Upload-download-and-query-data-in-a-non-relational-data-store.md) |
-
+| 02 - Exploración de datos relacionales en Azure | Exploración de Azure SQL Database | [dp900-01-sql-lab.md](https://github.com/MicrosoftLearning/DP-900T00A-Azure-Data-Fundamentals/blob/master/Instructions/Labs/dp900-01-sql-lab.md) |
+| 03 - Exploración de datos no relacionales en Azure | Exploración de Azure Storage | [dp900-02-storage-lab.md](https://github.com/MicrosoftLearning/DP-900T00A-Azure-Data-Fundamentals/blob/master/Instructions/Labs/dp900-02-storage-lab.md) |
+| 03 - Exploración de datos no relacionales en Azure| Exploración de Azure Cosmos DB  | [dp900-03-cosmos-lab.md](https://github.com/MicrosoftLearning/DP-900T00A-Azure-Data-Fundamentals/blob/master/Instructions/Labs/dp900-03-cosmos-lab.md) |
+| 04 - Exploración del análisis de datos en Azure | Explorar Azure Synapse Analytics | [dp900-04-synapse-lab.md](https://github.com/MicrosoftLearning/DP-900T00A-Azure-Data-Fundamentals/blob/master/Instructions/Labs/dp900-04-synapse-lab.md) |
+| 04 - Exploración del análisis de datos en Azure | Exploración de Azure Stream Analytics | [dp900-05-stream-lab.md](https://github.com/MicrosoftLearning/DP-900T00A-Azure-Data-Fundamentals/blob/master/Instructions/Labs/dp900-05-stream-lab.md) |
+| 04 - Exploración del análisis de datos en Azure | Visualización de datos con Power BI | [dp900-pbi-06-lab.md](https://github.com/MicrosoftLearning/DP-900T00A-Azure-Data-Fundamentals/blob/master/Instructions/Labs/dp900-pbi-06-lab.md) |
