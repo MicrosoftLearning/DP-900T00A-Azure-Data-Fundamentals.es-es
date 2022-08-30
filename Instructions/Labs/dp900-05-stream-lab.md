@@ -2,27 +2,22 @@
 lab:
   title: Exploración de Azure Stream Analytics
   module: Explore data analytics in Azure
-ms.openlocfilehash: 925607333098d0774839d705d4e055a78e32de27
-ms.sourcegitcommit: e73a39e323ef061919b58561ff1afdca876ad2b5
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "141493696"
 ---
+
 ## <a name="explore-azure-stream-analytics"></a>Exploración de Azure Stream Analytics
 
 En este ejercicio aprovisionará un trabajo de Azure Stream Analytics en su suscripción de Azure y lo usará para procesar un flujo de datos en tiempo real.
 
-> **Nota**: El ejercicio forma parte de un módulo en Microsoft Learn e incluye una opción para usar una suscripción de Azure de *espacio aislado*. Sin embargo, si va a completar este ejercicio como parte de una clase dirigida por instructores, debe usar la suscripción de Azure proporcionada como parte de la clase en lugar del espacio aislado.
+> <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: The exercise is part of a module on Microsoft Learn, and includes an option to use a <bpt id="p2">*</bpt>sandbox<ept id="p2">*</ept> Azure subscription. However, if you are completing this exercise as part of an instructor-led class, you should use the Azure subscription provided as part of the class instead of the sandbox.
 
 Antes de iniciar el ejercicio en Microsoft Learn, deberá preparar un entorno de Cloud Shell para la suscripción de Azure.
 
 1. Inicie sesión en la suscripción de Azure en [Azure Portal](https://portal.azure.com) en `https://portal.azure.com` con sus credenciales de suscripción de Azure.
-2. Use el botón **[\>_]** situado a la derecha de la barra de búsqueda en la parte superior de la página para crear una nueva instancia de Cloud Shell en Azure Portal, para lo que deberá seleccionar un entorno de **_Bash_** y crear almacenamiento si se solicita. Cloud Shell proporciona una interfaz de línea de comandos en un panel situado en la parte inferior de Azure Portal, como se muestra a continuación:
+2. Use the <bpt id="p1">**</bpt>[<ph id="ph1">\&gt;</ph>_]<ept id="p1">**</ept> button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, selecting a <bpt id="p2">***</bpt>Bash<ept id="p2">***</ept> environment and creating storage if prompted. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal, as shown here:
 
     ![Azure Portal con un panel de Cloud Shell](./images/cloud-shell.png)
 
-3. Tenga en cuenta que puede cambiar el tamaño de Cloud Shell arrastrando la barra de separación en la parte superior del panel, o usando los iconos **&#8212;** , **&#9723;** y **X** en la parte superior derecha para minimizar, maximizar y cerrar el panel. Para obtener más información sobre el uso de Azure Cloud Shell, consulte la [documentación de Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview).
+3. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the <bpt id="p1">**</bpt>&amp;#8212;<ept id="p1">**</ept>, <bpt id="p2">**</bpt>&amp;#9723;<ept id="p2">**</ept>, and <bpt id="p3">**</bpt>X<ept id="p3">**</ept> icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the <bpt id="p1">[</bpt>Azure Cloud Shell documentation<ept id="p1">](https://docs.microsoft.com/azure/cloud-shell/overview)</ept>.
 
 4. Ya está listo para completar el ejercicio en Microsoft Learn: solo tiene que usar Cloud Shell en su Azure Portal en lugar del se encuentra en el módulo de Learn (en blanco) (que se facilita a alumnos con una ruta de aprendizaje autodirigido mediante una suscripción de espacio aislado).
 
