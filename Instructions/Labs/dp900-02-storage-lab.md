@@ -21,8 +21,8 @@ El primer paso para usar Azure Storage es aprovisionar una cuenta de Azure Stora
 1. Si todavía no lo ha hecho, inicie sesión en [Azure Portal](https://portal.azure.com?azure-portal=true).
 1. On the Azure portal home page, select <bpt id="p1">**</bpt>&amp;#65291; Create a resource<ept id="p1">**</ept> from the upper left-hand corner and search for <bpt id="p2">*</bpt>Storage account<ept id="p2">*</ept>. Then in the resulting <bpt id="p1">**</bpt>Storage account<ept id="p1">**</ept> page, select <bpt id="p2">**</bpt>Create<ept id="p2">**</ept>.
 1. Escriba los valores siguientes en la página **Crear una cuenta de almacenamiento**:
-    - <bpt id="p1">**</bpt>Subscription<ept id="p1">**</ept>: If you're using a sandbox, select <bpt id="p2">*</bpt>Concierge Subscription<ept id="p2">*</ept>. Otherwise, select your Azure subscription.
-    - **Grupo de recursos**: si usa un espacio aislado, seleccione el grupo de recursos existente (que tendrá un nombre como *learn-xxxx…* ). De lo contrario, cree un grupo de recursos con el nombre que prefiera.
+    - **Suscripción**: Seleccione su suscripción a Azure.
+    - **Grupo de recursos**: cree un grupo de recursos con el nombre que prefiera.
     - **Nombre de la cuenta de almacenamiento**: escriba un nombre único para la cuenta de almacenamiento con números y letras minúsculas.
     - **Región**: seleccione cualquier ubicación disponible.
     - **Rendimiento**: *Estándar*
@@ -68,11 +68,11 @@ Azure Data Lake Store Gen2 support enables you to use hierarchical folders to or
 
 1. Descargue el archivo JSON [product2.json](https://aka.ms/product2.json?azure-portal=true) desde `https://aka.ms/product2.json` y guárdelo en el equipo en la misma carpeta en la que descargó anteriormente **product1.json** (lo cargará en el almacenamiento de blobs más adelante).
 1. En la página de la cuenta de almacenamiento en Azure Portal, en el lado izquierdo, desplácese a la sección **Configuración** y seleccione **Actualización de Data Lake Gen2**.
-1. En la página principal de Azure Portal, seleccione **&#65291; Crear un recurso** en la esquina superior izquierda y busque *Cuenta de almacenamiento*.
+1. In the ****Data Lake Gen2 upgrade**** page, expand and complete each step to upgrade your storage account to enable hierarchical namespace and support Azure Data Lake Storage Gen 2. This may take some time.
 1. Una vez que se complete la actualización, en la sección superior del panel de la izquierda, seleccione **Explorador de almacenamiento** y navegue de vuelta a la raíz del contenedor de blobs **data**, que todavía contiene la carpeta **product_data**.
 1. Seleccione la carpeta **product_data** y compruebe que todavía contiene el archivo **product1.json** que cargó anteriormente.
 1. Utilice el botón **&#10514; Cargar** para abrir el panel **Cargar blob**.
-1. Luego, en la página **Cuenta de almacenamiento** resultante, seleccione **Crear**.
+1. En la página principal de Azure Portal, seleccione **&#65291; Crear un recurso** en la esquina superior izquierda y busque *Cuenta de almacenamiento*.
 1. Cierre el panel **Cargar blob** si todavía está abierto y compruebe que la carpeta **product_data** ahora contiene el archivo **product2.json**.
 1. En el lado izquierdo, en la sección **Almacenamiento de datos**, seleccione **Contenedores**.
 1. Abra el contenedor **data** y compruebe que aparece la carpeta **product_data** que creó.
@@ -86,7 +86,7 @@ Azure Files proporciona una manera de crear recursos compartidos de archivos bas
 1. En la página del contenedor de almacenamiento en Azure Portal, en la sección **Almacenamiento de datos** que aparece al lado izquierdo, seleccione **Recursos compartidos de archivos**.
 1. En la página Recursos compartidos de archivos, seleccione **&#65291; Recurso compartido de archivos** y agregue un recurso compartido de archivos nuevo denominado **files** mediante el nivel **Optimizado para transacciones**.
 1. En los **Recursos compartidos de archivos**, abra el recurso compartido de archivos **files** nuevo.
-1. At the top of the page, select <bpt id="p1">**</bpt>Connect<ept id="p1">**</ept>. Then in the <bpt id="p1">**</bpt>Connect<ept id="p1">**</ept> pane, note that there are tabs for common operating systems (Windows, Linux, and macOS) that contain scripts you can run to connect to the shared folder from a client computer.
+1. Luego, en la página **Cuenta de almacenamiento** resultante, seleccione **Crear**.
 1. Cierre el panel **Conectar** y, luego, cierre la página **files** para volver a la página **Recursos compartidos de archivos** de la cuenta de Azure Storage.
 
 ## <a name="explore-azure-tables"></a>Exploración de tablas de Azure
