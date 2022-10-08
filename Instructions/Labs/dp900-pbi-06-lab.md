@@ -19,11 +19,11 @@ Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la 
 Si Microsoft Power BI Desktop no está instalado aún en el equipo de Windows, puede descargarlo e instalarlo de forma gratuita.
 
 1. Descargue el instalador de Power BI Desktop de [https://aka.ms/power-bi-desktop](https://aka.ms/power-bi-desktop?azure-portal=true).
-1. When the file has downloaded, open it, and use the setup wizard to install Power BI Desktop on your computer. This insatllation may take a few minutes.
+1. Cuando el archivo se haya descargado, ábralo e instale Power BI Desktop en el equipo mediante el asistente para instalación. Esta instalación puede tardar unos minutos.
 
 ## <a name="import-data"></a>Importar datos
 
-1. Open Power BI Desktop. The application interface should look similar to this:
+1. Abra Power BI Desktop. La interfaz de la aplicación debe tener un aspecto similar al siguiente:
 
     ![Captura de pantalla en la que se muestra la pantalla de inicio de Power BI Desktop.](images/power-bi-start.png)
 
@@ -41,7 +41,7 @@ Si Microsoft Power BI Desktop no está instalado aún en el equipo de Windows,
 
 1. En el cuadro de diálogo Acceder a contenido web, seleccione **Conectar**.
 
-1. Verify that the URL opens a dataset containing customer data, as shown below. Then select <bpt id="p1">**</bpt>Load<ept id="p1">**</ept> to load the data into the data model for your report.
+1. Compruebe que la dirección URL abra un conjunto de datos que contiene los datos del cliente, como se muestra a continuación. A continuación, seleccione **Cargar** para cargar los datos en el modelo de datos del informe.
 
     ![Captura de pantalla en la que se muestra un conjunto de datos de un cliente mostrados en Power BI.](images/customers.png)
 
@@ -67,7 +67,7 @@ Si Microsoft Power BI Desktop no está instalado aún en el equipo de Windows,
 
 Las tres tablas de datos que ha importado se han cargado en un modelo de datos, que ahora explorará y refinará.
 
-1. In Power BI Desktop, on the left-side edge, select the <bpt id="p1">**</bpt>Model<ept id="p1">**</ept> tab, and then arrange the tables in the model so you can see them. You can hide the panes on the right side by using the <bpt id="p1">**</bpt><ph id="ph1">&gt;&gt;</ph><ept id="p1">**</ept> icons:
+1. En Power BI Desktop, en el borde izquierdo, seleccione la pestaña **Modelo** y, después, organice las tablas del modelo para que pueda verlas. Puede ocultar los paneles en el lado derecho mediante los iconos **>>** :
 
     ![Captura de pantalla en la que se muestra la pestaña Modelo en Power BI.](images/model-tab.png)
 
@@ -77,12 +77,12 @@ Las tres tablas de datos que ha importado se han cargado en un modelo de datos, 
 
     Este paso garantizará que los valores de ingresos se muestren como moneda en las visualizaciones de informes.
 
-1. In the products table, right-click the <bpt id="p1">**</bpt>Category<ept id="p1">**</ept> field (or open its <bpt id="p2">**</bpt><ph id="ph1">&amp;vellip;</ph><ept id="p2">**</ept> menu) and select <bpt id="p3">**</bpt>Create hierarchy<ept id="p3">**</ept>. This step creates a hierarchy named <bpt id="p1">**</bpt>Category Hierarchy<ept id="p1">**</ept>. You may need to expand or scroll in the <bpt id="p1">**</bpt>products<ept id="p1">**</ept> table to see this - you can also see it in the <bpt id="p2">**</bpt>Fields<ept id="p2">**</ept> pane:
+1. En la tabla products, haga clic con el botón derecho en el campo **Categoría** (o abra su menú **&vellip;** ) y seleccione **Crear jerarquía**. En este paso se crea una jerarquía denominada **Jerarquía de categoría**. Es posible que tenga que expandir o desplazarse por la tabla **products** para verlo; también puede verlo en el panel **Campos**:
 
     ![Captura de pantalla en la que se muestra cómo agregar Jerarquía de categoría en Power BI.](images/category-hierarchy.png)
 
-1. In the products table, right-click the <bpt id="p1">**</bpt>ProductName<ept id="p1">**</ept> field (or open its <bpt id="p2">**</bpt><ph id="ph1">&amp;vellip;</ph><ept id="p2">**</ept> menu) and select <bpt id="p3">**</bpt>Add to hierarchy<ept id="p3">**</ept><ph id="ph2"> &gt; </ph><bpt id="p4">**</bpt>Category Hierarchy<ept id="p4">**</ept>. This adds the <bpt id="p1">**</bpt>ProductName<ept id="p1">**</ept> field to the hierarchy you created previously.
-1. In the <bpt id="p1">**</bpt>Fields<ept id="p1">**</ept> pane, right-click <bpt id="p2">**</bpt>Category Hierarchy<ept id="p2">**</ept> (or open its <bpt id="p3">**</bpt>...<ept id="p3">**</ept> menu) and select <bpt id="p4">**</bpt>Rename<ept id="p4">**</ept>. Then rename the hierarchy to <bpt id="p1">**</bpt>Categorized Product<ept id="p1">**</ept>.
+1. En la tabla products, haga clic con el botón derecho en el campo **ProductName** (o abra su menú **&vellip;** ) y seleccione **Agregar a la jerarquía** > **Jerarquía de categoría**. Esto agrega el campo **ProductName** a la jerarquía que creó anteriormente.
+1. En el panel **Campos**, haga clic con el botón derecho en **Jerarquía de categoría** (o abra su menú **...**) y seleccione **Cambiar nombre**. Luego cambie el nombre de la jerarquía a **Producto clasificado**.
 
     ![Captura de pantalla en la que se muestra cómo cambiar el nombre de la jerarquía en Power BI.](images/rename-hierarchy.png)
 
@@ -95,9 +95,9 @@ Las tres tablas de datos que ha importado se han cargado en un modelo de datos, 
 
 ## <a name="create-a-report"></a>Creación de un informe
 
-Now you're almost ready to create a report. First you need to check some settings to ensure all visualizations are enabled.
+Ahora ya está casi listo para crear un informe. En primer lugar, debe comprobar algunas configuraciones para asegurarse de que todas las visualizaciones están habilitadas.
 
-1. On the <bpt id="p1">**</bpt>File<ept id="p1">**</ept> menu, select <bpt id="p2">**</bpt>Options and Settings<ept id="p2">**</ept>. Then select <bpt id="p1">**</bpt>Options<ept id="p1">**</ept>, and in the <bpt id="p2">**</bpt>Security<ept id="p2">**</ept> section, ensure that <bpt id="p3">**</bpt>Use Map and Filled Map visuals<ept id="p3">**</ept> is enabled and select <bpt id="p4">**</bpt>OK<ept id="p4">**</ept>.
+1. En el menú **Archivo**, seleccione **Opciones y configuración**. A continuación, seleccione **Opciones** y, en la sección **Seguridad**, asegúrese de que **Uso de elementos visuales de mapa y mapa coroplético** esté habilitado y seleccione **Aceptar**.
 
     ![Captura de pantalla en la que se muestra cómo establecer la propiedad Usar objetos visuales de mapa y de mapa rellenado en Power BI.](images/set-options.png)
 
@@ -107,42 +107,42 @@ Now you're almost ready to create a report. First you need to check some setting
 
     ![Captura de pantalla en la que se muestra la pestaña Informe en Power BI.](images/report-tab.png)
 
-1. In the ribbon, above the report design surface, select <bpt id="p1">**</bpt>Text Box<ept id="p1">**</ept> and add a text box containing the text <bpt id="p2">**</bpt>Sales Report<ept id="p2">**</ept> to the report. Format the text to make it bold with a font size of 32.
+1. En la cinta de opciones, encima de la superficie de diseño del informe, seleccione **Cuadro de texto** y agregue un cuadro de texto que contenga el texto **Informe de ventas** al informe. Dele al texto un formato de negrita con un tamaño de fuente de 32.
 
     ![Captura de pantalla en la que se muestra cómo agregar un cuadro de texto en Power BI.](images/text-box.png)
 
-1. Cuando el archivo se haya descargado, ábralo e instale Power BI Desktop en el equipo mediante el asistente para instalación.
+1. Seleccione cualquier área vacía del informe para que se deseleccione el cuadro de texto. A continuación, en el panel **Campos**, expanda **Productos** y seleccione el campo **Productos clasificados**. En este paso se agrega una tabla al informe.
 
     ![Captura de pantalla en la que se muestra cómo agregar una tabla de productos clasificados a un informe en Power BI.](images/categorized-products-table.png)
 
-1. Esta instalación puede tardar unos minutos.
+1. Con la tabla aún seleccionada, en el panel **Campos**, expanda **Pedidos** y seleccione **Ingresos**. Se agrega una columna Ingresos a la tabla. Es posible que tenga que ampliar el tamaño de la tabla para verla.
 
-    The revenue is formatted as currency, as you specified in the model. However, you didn't specify the number of decimal places, so the values include fractional amounts. It won't matter for the visualizations you're going to create, but you could go back to the <bpt id="p1">**</bpt>Model<ept id="p1">**</ept> or <bpt id="p2">**</bpt>Data<ept id="p2">**</ept> tab and change the decimal places if you wish.
+    A los ingresos se les aplica un formato de moneda, como se especificó en el modelo. Sin embargo, no especificó el número de posiciones decimales, por lo que los valores incluyen cantidades fraccionales. Aunque no es relevante para las visualizaciones que vaya a crear, pero podría volver a la pestaña **Modelo** o **Datos** y cambiar las posiciones decimales si quiere.
 
     ![Captura de pantalla en la que se muestra una tabla de productos clasificados con ingresos en un informe.](images/revenue-column.png)
 
-1. With the table still selected, in the <bpt id="p1">**</bpt>Visualizations<ept id="p1">**</ept> pane, select the <bpt id="p2">**</bpt>Stacked column chart<ept id="p2">**</ept> visualization. The table is changed to a column chart showing revenue by category.
+1. Con la tabla aún seleccionada, en el panel **Visualizaciones**, seleccione la visualización **Gráfico de columnas apiladas**. La tabla se cambia a un gráfico de columnas que muestra los ingresos por categoría.
 
     ![Captura de pantalla en la que se muestra un gráfico de columnas apiladas de productos clasificados con ingresos en un informe.](images/stacked-column-chart.png)
 
-1. Abra Power BI Desktop.
+1. Encima del gráfico de columnas seleccionado, seleccione el icono **&#8595;** para activar la exploración en profundidad. A continuación, en el gráfico, seleccione la segunda columna (*Bicicletas de carretera*) para explorar en profundidad y ver los ingresos de los productos de esta categoría. Esta funcionalidad es posible porque ha definido una jerarquía de categorías y productos.
 
     ![Captura de pantalla en la que se muestra un gráfico de columnas explorado en profundidad para ver los productos de una categoría.](images/drill-down.png)
 
-1. La interfaz de la aplicación debe tener un aspecto similar al siguiente:
-1. Select a blank area of the report, and then in the <bpt id="p1">**</bpt>Fields<ept id="p1">**</ept> pane, select the <bpt id="p2">**</bpt>Quantity<ept id="p2">**</ept> field in the <bpt id="p3">**</bpt>orders<ept id="p3">**</ept> table and the <bpt id="p4">**</bpt>Category<ept id="p4">**</ept> field in the <bpt id="p5">**</bpt>products<ept id="p5">**</ept> table. This step results in another column chart showing sales quantity by product category.
+1. Use el icono **&#x2191;** para obtener una exploración inversa de nivel de categoría. Después, seleccione el icono **(** &#8595; **)** para desactivar la característica de exploración en profundidad.
+1. Seleccione un área en blanco del informe y, a continuación, en el panel **Campos**, seleccione el campo **Cantidad** en la tabla **orders** y el campo **Categoría** de la tabla **products**. En este paso se genera otro gráfico de columnas en el que se muestra la cantidad de ventas por categoría de producto.
 1. Con el nuevo gráfico de columnas seleccionado, en el panel **Visualizaciones**, seleccione **Gráfico circular** y, a continuación, cambie el tamaño del gráfico y colóquelo junto al gráfico de columnas de ingresos por categoría.
 
     ![Captura de pantalla en la que se muestra un gráfico circular en el que se muestra la cantidad de ventas por categoría.](images/category-pie-chart.png)
 
-1. Select a blank area of the report, and then in the <bpt id="p1">**</bpt>Fields<ept id="p1">**</ept> pane, select the <bpt id="p2">**</bpt>City<ept id="p2">**</ept> field in the <bpt id="p3">**</bpt>customers<ept id="p3">**</ept> table and then select the <bpt id="p4">**</bpt>Revenue<ept id="p4">**</ept> field in the <bpt id="p5">**</bpt>orders<ept id="p5">**</ept> table. This results in a map showing sales revenue by city. Rearrange and resize the visualizations as needed:
+1. Seleccione un área en blanco del informe y, a continuación, en el panel **Campos**, seleccione el campo **Ciudad** en la tabla **customers** y, a continuación, seleccione el campo **Ingresos** en la tabla **orders**. Esto da como resultado un mapa en el que se muestran los ingresos por ventas por ciudad. Reorganice y cambie el tamaño de las visualizaciones cuando sea necesario:
 
     ![Captura de pantalla en la que se muestra un mapa en el que se muestran los ingresos por ciudad.](images/revenue-map.png)
 
-1. In the map, note that you can drag, double-click, use a mouse-wheel, or pinch and drag on a touch screen to interact. Then select a specific city, and note that the other visualizations in the report are modified to highlight the data for the selected city.
+1. En el mapa, tenga en cuenta que, para interactuar, puede arrastrar, hacer doble clic, usar la rueda del mouse o acercar y arrastrar en una pantalla táctil. A continuación, seleccione una ciudad específica y tenga en cuenta que las demás visualizaciones del informe se modifican para resaltar los datos de la ciudad seleccionada.
 
     ![Captura de pantalla en la que se muestra un mapa en el que se muestran los ingresos por ciudad resaltando los datos de la ciudad seleccionada.](images/selected-data.png)
 
-1. On the <bpt id="p1">**</bpt>File<ept id="p1">**</ept> menu, select <bpt id="p2">**</bpt>Save<ept id="p2">**</ept>. Then save the file with an appropriate .pbix file name. You can open the file and explore data modeling and visualization further at your leisure.
+1. En el menú **Archivo**, seleccione **Guardar**. A continuación, guarde el archivo con un nombre de archivo .pbix adecuado. Puede abrir el archivo y seguir explorando el modelado y la visualización de los datos a su antojo.
 
 Si tiene una suscripción a un [servicio Power BI](https://www.powerbi.com/?azure-portal=true), puede iniciar sesión en su cuenta y publicar el informe en un área de trabajo de Power BI. 

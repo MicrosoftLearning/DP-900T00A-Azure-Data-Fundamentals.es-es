@@ -20,7 +20,7 @@ Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la 
 
 1. Abra Azure Portal en [https://portal.azure/com](https://portal.azure.com?azure-portal=true) e inicie sesión con las credenciales asociadas con su suscripción de Azure.
 
-    > <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Ensure you are working in the directory containing your subscription - indicated at the top right under your user ID. If not, select the user icon and switch directory.
+    >                 **Nota**: Asegúrese de que está trabajando en el directorio que contiene la suscripción, lo que se indica en la parte superior derecha, debajo del identificador de usuario. Si no es así, seleccione el icono de usuario y cambie el directorio.
 
 1. En la página **Inicio** de Azure Portal, use el icono **&#65291; Crear un recurso** para crear un recurso.
 1. Busque *Azure Synapse Analytics*, y cree un recurso de **Azure Synapse Analytics** con la siguiente configuración:
@@ -33,7 +33,7 @@ Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la 
         - **Nombre de cuenta**: *cree una cuenta con un nombre único, por ejemplo, "datalake<your_name>"*.
         - **Nombre del sistema de archivos**: *cree un sistema de archivos con un nombre único, por ejemplo, "fs<your_name>"*.
 
-    > <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: A Synapse Analytics workspace requires two resource groups in your Azure subscription; one for resources you explicitly create, and another for managed resources used by the service. It also requires a Data Lake storage account in which to store data, scripts, and other artifacts.
+    >                 **Nota**: Un área de trabajo de Synapse Analytics requiere dos grupos de recursos en la suscripción de Azure; uno para los recursos creados explícitamente y otro para los recursos administrados que utiliza el servicio. También requiere una cuenta de almacenamiento de Data Lake en la que almacenar datos, scripts y otros artefactos.
 
 1. Cuando haya especificado estos detalles, seleccione **Revisar y crear** y, a continuación, seleccione **Crear** para crear el área de trabajo.
 1. Espere a que se cree el área de trabajo; puede tardar unos cinco minutos.
@@ -72,7 +72,7 @@ Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la 
     - **Formato de datos**: CSV
     - **Omitir el primer registro**: seleccionado
     - **Asignación**: devices_mapping
-1. Ensure the column data types have been correctly identified as <bpt id="p1">*</bpt>Time (datetime)<ept id="p1">*</ept>, <bpt id="p2">*</bpt>Device (string)<ept id="p2">*</ept>, and <bpt id="p3">*</bpt>Value (long)<ept id="p3">*</ept>). Then select <bpt id="p1">**</bpt>Next: Start Ingestion<ept id="p1">**</ept>.
+1. Asegúrese de que los tipos de datos de columna se identificaron correctamente como *Hora (datetime)*, *Dispositivo (string)* y *Valor (long)*). Luego, seleccione **Siguiente: Iniciar ingesta**.
 1. Una vez que se complete la ingesta, seleccione **Cerrar**.
 1. En la pestaña **Consulta** de Azure Data Explorer, asegúrese de que esté seleccionada la base de datos **iot-data** y, luego, en el panel de consulta, escriba la consulta siguiente.
 
@@ -90,13 +90,13 @@ Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la 
 
     Si los resultados coinciden, significa que creó correctamente la tabla **devices** a partir de los datos del archivo.
 
-    > <bpt id="p1">**</bpt>Tip<ept id="p1">**</ept>: In this example, you imported a very small amount of batch data from a file, which is fine for the purposes of this exercise. In reality, you can use Data Explorer to analyze much larger volumes of data; and since you enabled stream ingestion, you could also have configured Data Explorer to ingest data into the table from a streaming source such as Azure Event Hubs.
+    >                 **Sugerencia**: En este ejemplo, ha importado una cantidad muy pequeña de datos por lotes desde un archivo, lo que sirve para los fines de este ejercicio. En realidad, puede usar Data Explorer para analizar volúmenes de datos mucho más grandes y, como habilitó la ingesta de flujos, también podría haber configurado Data Explorer para ingerir datos en la tabla desde un origen de streaming como Azure Event Hubs.
 
 ## <a name="use-kusto-query-language-to-query-the-table-in-synapse-studio"></a>Uso del lenguaje de consulta Kusto para consultar la tabla en Synapse Studio
 
 1. Cierre la pestaña del explorador de Azure Data Explorer y vuelva a la pestaña que contiene Synapse Studio.
-1. On the <bpt id="p1">**</bpt>Data<ept id="p1">**</ept> page, expand the <bpt id="p2">**</bpt>iot-data<ept id="p2">**</ept> database and its <bpt id="p3">**</bpt>Tables<ept id="p3">**</ept> folder. Then in the <bpt id="p1">**</bpt>...<ept id="p1">**</ept> menu for the <bpt id="p2">**</bpt>devices<ept id="p2">**</ept> table, select <bpt id="p3">**</bpt>New KQL Script<ept id="p3">**</ept><ph id="ph1"> &gt; </ph><bpt id="p4">**</bpt>Take 1000 rows<ept id="p4">**</ept>.
-1. Review the generated query and its results. The query should contain the following code:
+1. En la página **Datos**, expanda la base de datos **iot-data** y su carpeta **Tablas**. Luego, en el menú **…** de la tabla **devices**, seleccione **Nuevo script de KQL** > **Tomar 1000 filas**.
+1. Revise la consulta generada y sus resultados. La consulta debe contener el código siguiente:
 
     ```kusto
     devices
@@ -112,7 +112,7 @@ Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la 
     | where Device == 'Dev1'
     ```
 
-1. Select <bpt id="p1">**</bpt>&amp;#9655; Run<ept id="p1">**</ept> to run the query. Then review the results, which should contain only the rows for the <bpt id="p1">*</bpt>Dev1<ept id="p1">*</ept> device.
+1. Seleccione **&#9655; Ejecutar** para ejecutar la consulta. Luego, revise los resultados, que solo deben contener las filas correspondientes al dispositivo *Dev1*.
 
 1. Modifique la consulta del siguiente modo:
 
