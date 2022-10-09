@@ -18,9 +18,9 @@ Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la 
 
 En este ejercicio, aprovisionará un recurso de Azure Database for MySQL.
 
-1. In the Azure portal, select <bpt id="p1">**</bpt>&amp;#65291; Create a resource<ept id="p1">**</ept> from the upper left-hand corner and search for <bpt id="p2">*</bpt>Azure Database for MySQL<ept id="p2">*</ept>. Then in the resulting <bpt id="p1">**</bpt>Azure Database for MySQL<ept id="p1">**</ept> page, select <bpt id="p2">**</bpt>Create<ept id="p2">**</ept>.
+1. En Azure Portal, seleccione **&#65291; Crear un recurso** en la esquina superior izquierda y busque *Azure Database for MySQL*. En la página **Azure Database for MySQL** que aparece, seleccione **Crear**.
 
-1. Review the Azure Database for MySQL options that are available. Then for <bpt id="p1">**</bpt>Resource type<ept id="p1">**</ept>, select <bpt id="p2">**</bpt>Flexible Server<ept id="p2">**</ept> and select <bpt id="p3">**</bpt>Create<ept id="p3">**</ept>.
+1. Revise las opciones de Azure Database for MySQL disponibles. Después, en **Tipo de recurso**, seleccione **Servidor flexible** y luego **Crear**.
 
     ![Captura de pantalla de las opciones de implementación para Azure Database for MySQL](images/mysql-options.png)
 
@@ -43,7 +43,7 @@ En este ejercicio, aprovisionará un recurso de Azure Database for MySQL.
 
 1. Seleccione **Revisar y crear** y, luego, **Crear** para crear la base de datos de Azure MySQL.
 
-1. Wait for deployment to complete. Then go to the resource that was deployed, which should look like this:
+1. Espere a que la implementación finalice. Después, vaya al recurso que se ha implementado, que debería tener este aspecto:
 
     ![Captura de pantalla de Azure Portal en la que se muestra la página Azure Database for MySQL.](images/mysql-portal.png)
 

@@ -16,7 +16,7 @@ Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la 
 
 ## <a name="provision-an-azure-sql-database-resource"></a>Aprovisionamiento de un recurso de Azure SQL Database
 
-1. In the <bpt id="p1">[</bpt>Azure portal<ept id="p1">](https://portal.azure.com?azure-portal=true)</ept>, select <bpt id="p2">**</bpt>&amp;#65291; Create a resource<ept id="p2">**</ept> from the upper left-hand corner and search for <bpt id="p3">*</bpt>Azure SQL<ept id="p3">*</ept>. Then in the resulting <bpt id="p1">**</bpt>Azure SQL<ept id="p1">**</ept> page, select <bpt id="p2">**</bpt>Create<ept id="p2">**</ept>.
+1. En [Azure Portal](https://portal.azure.com?azure-portal=true), seleccione **&#65291; Crear un recurso** en la esquina superior izquierda y busque *Azure SQL*. En la página de **Azure SQL** que aparece, seleccione **Crear**.
 
 1. Revise las opciones de Azure SQL disponibles y, luego, en el icono **Bases de datos SQL**, asegúrese de que está seleccionado **Base de datos única** y seleccione **Crear**.
 
@@ -26,12 +26,12 @@ Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la 
     - **Suscripción**: Seleccione su suscripción a Azure.
     - **Grupo de recursos**: cree un grupo de recursos con el nombre que prefiera.
     - **Nombre de la base de datos**: *AdventureWorks*.
-    - <bpt id="p1">**</bpt>Server<ept id="p1">**</ept>:  Select <bpt id="p2">**</bpt>Create new<ept id="p2">**</ept> and create a new server with a unique name in any available location. Use <bpt id="p1">**</bpt>SQL authentication<ept id="p1">**</ept> and specify your name as the server admin login and a suitably complex password (remember the password - you'll need it later!)
+    -                 **Servidor**: seleccione **Crear nuevo** y cree un servidor con un nombre único en cualquier ubicación disponible. Use la **autenticación de SQL** y especifique su nombre como inicio de sesión de administrador del servidor y una contraseña con una complejidad adecuada (anote la contraseña, ya que la necesitará más adelante).
     - **¿Quiere usar un grupo elástico de SQL?**: *No*.
     - **Proceso y almacenamiento**: no lo cambie.
     - **Redundancia de almacenamiento de Backup**: seleccione *Locally-redundant backup storage* (Almacenamiento de copia de seguridad con redundancia local).
 
-1. On the <bpt id="p1">**</bpt>Create SQL Database<ept id="p1">**</ept> page, select <bpt id="p2">**</bpt>Next :Networking &gt;<ept id="p2">**</ept>, and on the <bpt id="p3">**</bpt>Networking<ept id="p3">**</ept> page, in the <bpt id="p4">**</bpt>Network connectivity<ept id="p4">**</ept> section, select <bpt id="p5">**</bpt>Public endpoint<ept id="p5">**</ept>. Then select <bpt id="p1">**</bpt>Yes<ept id="p1">**</ept> for both options in the <bpt id="p2">**</bpt>Firewall rules<ept id="p2">**</ept> section to allow access to your database server from Azure services and your current client IP address.
+1. En la página **Crear base de datos SQL**, seleccione **Siguiente: Redes >** y, en la página **Redes**, en la sección **Conectividad de red**, seleccione **Punto de conexión público**. Seleccione **Sí** para ambas opciones de la sección **Reglas de firewall** a fin de permitir el acceso al servidor de bases de datos desde los servicios de Azure y la dirección IP del cliente actual.
 
 1. Seleccione **Siguiente: Seguridad >** y establezca la opción **Enable Microsoft Defender for SQL** (Habilitar Microsoft Defender para SQL) en **Ahora no**.
 
@@ -39,7 +39,7 @@ Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la 
 
 1. Seleccione **Revisar y crear** y, luego, **Crear** para crear la base de datos de Azure SQL.
 
-1. Wait for deployment to complete. Then go to the resource that was deployed, which should look like this:
+1. Espere a que la implementación finalice. Después, vaya al recurso que se ha implementado, que debería tener este aspecto:
 
     ![Captura de pantalla de Azure Portal en la que se muestra la página SQL Database.](images//sql-database-portal.png)
 
