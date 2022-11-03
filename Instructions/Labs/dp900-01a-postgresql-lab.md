@@ -20,7 +20,7 @@ En este ejercicio, aprovisionará un recurso de Azure Database for PostgreSQL.
 
 1. En Azure Portal, seleccione **&#65291; Crear un recurso** en la esquina superior izquierda y busque *Azure Database for PostgreSQL*. En la página **Azure Database for PostgreSQL** que aparece, seleccione **Crear**.
 
-1. Revise las opciones de Azure Database for PostgreSQL que están disponibles y luego, en el icono **Servidor flexible**, seleccione **Crear**.
+1. Revise las opciones disponibles de Azure Database for PostgreSQL y, a continuación, en el elemento **Azure Database for PostgreSQL**, seleccione **Servidor flexible (recomendado)** y **Crear**.
 
     ![Captura de pantalla de las opciones de implementación de Azure Database for PostgreSQL](images/postgresql-options.png)
 
