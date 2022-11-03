@@ -83,15 +83,15 @@ Una de las tareas clave que puede realizar con Azure Synapse Analytics es defini
     - **Primera fila como encabezado**: seleccionada
     - **Tipo de compresión**: ninguno
 7. En el paso **Destino**, en el subpaso **Conjunto de datos**, seleccione la siguiente configuración:
-    - **Tipo de destino**: Azure Data Lake Storage Gen 2
+    - **Tipo de destino**: Azure Data Lake Storage Gen 2.
     - **Conexión**: *seleccione la conexión existente a su instancia de Data Lake Store (se creó automáticamente al crear el área de trabajo).*
-8. Después de seleccionar la conexión, en el paso **Destino/Conjunto de datos**, asegúrese de que está seleccionada la siguiente configuración y, después, seleccione **Siguiente >** :
+8. Después de seleccionar la conexión, en el paso **Destino/Conjunto de datos**, asegúrese de que está seleccionada la siguiente configuración y, después, elija **Siguiente >** :
     - **Ruta de acceso de la carpeta**: *vaya a la carpeta del sistema de archivos*
     - **Nombre de archivo**: products.csv
     - **Comportamiento de copia**: ninguno
     - **Número máximo de conexiones simultáneas**: *dejar en blanco*
     - **Tamaño de bloque (MB)**: *dejar en blanco*
-9. En el paso **Destino,** en el subpaso **Configuración**, asegúrese de que están seleccionadas las siguientes propiedades. Luego, seleccione **Siguiente >**.
+9. En el paso **Destino**, en el subpaso **Configuración**, asegúrese de que están seleccionadas las siguientes propiedades. Luego, seleccione **Siguiente >**.
     - **Formato de archivo**: DelimitedText
     - **Delimitador de columna**: coma (,)
     - **Delimitador de fila**: avance de línea (\n)
@@ -106,7 +106,7 @@ Una de las tareas clave que puede realizar con Azure Synapse Analytics es defini
     - **Habilitar registro**: <u>sin</u> seleccionar
     - **Habilitar almacenamiento provisional**: <u>sin</u> seleccionar
 11. En el paso **Revisar y finalizar**, en el subpaso **Revisar**, lea el resumen y, a continuación, haga clic en **Siguiente >**.
-12. En el paso **Implementación**, espere a que se implemente la canalización y, a continuación, haga clic en **Finalizar**.
+12. En el subpaso **Implementación**, espere a que se implemente la canalización y, luego, haga clic en **Finalizar**.
 13. En Synapse Studio, seleccione la página **Supervisar** y, en la pestaña **Ejecuciones de canalizaciones**, espere a que la canalización **Copy products** se complete con el estado **Correcto** (puede usar el botón **&#8635; Actualizar** de la página Ejecuciones de canalizaciones para actualizar el estado).
 14. En la página **Datos**, seleccione la pestaña **Vinculado** y expanda la jerarquía de **Azure Data Lake Storage Gen 2** hasta que vea el almacenamiento de archivos para el área de trabajo de Synapse. A continuación, seleccione el almacenamiento de archivos para comprobar que un archivo llamado **products.csv** se ha copiado en esta ubicación, como se muestra aquí:
 
