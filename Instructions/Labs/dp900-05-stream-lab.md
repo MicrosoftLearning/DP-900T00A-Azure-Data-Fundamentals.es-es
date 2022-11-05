@@ -84,8 +84,8 @@ Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la 
 6. En el panel de la izquierda de la hoja de la cuenta de almacenamiento, seleccione la pestaña **Contenedores**.
 7. Abra el contenedor de **datos**.
 8. En el contenedor de **datos**, navegue por la jerarquía de carpetas, que incluye una carpeta para el año actual, con subcarpetas para el mes, el día y la hora.
-9. En la carpeta de la hora, seleccione el archivo creado, que debe tener un nombre similar a **0_xxxxxxxxxxxxxxxx.json**.
-10. En la página del archivo, seleccione **Editar** y revise el contenido del archivo, que debe constar de un registro JSON para cada periodo de 10 segundos, que muestra el número de mensajes recibidos de dispositivos IoT, como este:
+9. En la carpeta de la hora, fíjese en el archivo creado, que debe tener un nombre parecido a **0_xxxxxxxxxxxxxxxx.json**.
+10. En el menú **…** del archivo (a la derecha de los detalles del archivo), seleccione **Ver/Editar** y revise el contenido del archivo, que debe consistir en un registro JSON para cada período de 10 segundos que muestre la cantidad de mensajes recibidos de los dispositivos IoT, como este:
 
     ```
     {"starttime":"2021-10-23T01:02:13.2221657Z","endtime":"2021-10-23T01:02:23.2221657Z","device":"iotdevice","messages":2}

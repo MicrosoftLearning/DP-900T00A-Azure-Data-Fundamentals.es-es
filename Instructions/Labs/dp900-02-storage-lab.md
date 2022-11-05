@@ -68,7 +68,7 @@ La compatibilidad con Azure Data Lake Store Gen2 le permite usar carpetas jerá
 
 1. Descargue el archivo JSON [product2.json](https://aka.ms/product2.json?azure-portal=true) desde `https://aka.ms/product2.json` y guárdelo en el equipo en la misma carpeta en la que descargó anteriormente **product1.json** (lo cargará en el almacenamiento de blobs más adelante).
 1. En la página de la cuenta de almacenamiento en Azure Portal, en el lado izquierdo, desplácese a la sección **Configuración** y seleccione **Actualización de Data Lake Gen2**.
-1. En la página ****Actualización de Data Lake Gen2****, expanda y complete cada paso para actualizar la cuenta de almacenamiento a fin de habilitar el espacio de nombres jerárquico y admitir Azure Data Lake Storage Gen2. Esto puede llevar algo de tiempo.
+1. En la página **Actualización de Data Lake Gen2**, expanda y complete cada paso para actualizar la cuenta de almacenamiento a fin de habilitar el espacio de nombres jerárquico y admitir Azure Data Lake Storage Gen2. Esto puede llevar algo de tiempo.
 1. Una vez que se complete la actualización, en la sección superior del panel de la izquierda, seleccione **Explorador de almacenamiento** y navegue de vuelta a la raíz del contenedor de blobs **data**, que todavía contiene la carpeta **product_data**.
 1. Seleccione la carpeta **product_data** y compruebe que todavía contiene el archivo **product1.json** que cargó anteriormente.
 1. Utilice el botón **&#10514; Cargar** para abrir el panel **Cargar blob**.
@@ -104,7 +104,7 @@ Las tablas de Azure proporcionan un almacén de clave-valor para las aplicacione
     - **RowKey**: 1
 1. Seleccione **Agregar propiedad** y cree una propiedad con estos valores:
 
-    |Nombre de propiedad | Tipo | Valor |
+    |Nombre de propiedad | Tipo | Value |
     | ------------ | ---- | ----- |
     | Nombre | String | Widget |
 

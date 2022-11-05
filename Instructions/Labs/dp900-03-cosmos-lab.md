@@ -15,10 +15,10 @@ Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la 
 
 ## <a name="create-a-cosmos-db-account"></a>Creación de una cuenta de Cosmos DB
 
-Para usar Cosmos DB, debe aprovisionar una cuenta de Cosmos DB en su suscripción de Azure. En este ejercicio, aprovisionará una cuenta de Cosmos DB que usa la API de núcleo (SQL).
+Para usar Cosmos DB, debe aprovisionar una cuenta de Cosmos DB en su suscripción de Azure. En este ejercicio, aprovisionará una cuenta de Cosmos DB que usa Azure Cosmos DB for NoSQL.
 
 1. En Azure Portal, seleccione **+ Crear un recurso** en la parte superior izquierda y busque *Azure Cosmos DB*.  En los resultados, seleccione **Azure Cosmos DB** y luego **Crear**.
-1. En el mosaico **Núcleo (SQL): Recomendado**, seleccione **Crear**.
+1. En el icono de **Azure Cosmos DB for NoSQL**, seleccione **Crear**.
 1. Escriba los detalles siguientes y seleccione **Revisar y crear**: 
     - **Suscripción**: si usa un espacio aislado, seleccione la opción *Concierge Subscription* (Suscripción de Concierge). En caso contrario, seleccione su suscripción de Azure.
     - **Grupo de recursos**: si usa un espacio aislado, seleccione el grupo de recursos existente (que tendrá un nombre como *learn-xxxx…* ). De lo contrario, cree un grupo de recursos con el nombre que prefiera.
@@ -71,6 +71,6 @@ Para usar Cosmos DB, debe aprovisionar una cuenta de Cosmos DB en su suscripció
 1. Use el botón **Ejecutar consulta** para ejecutar la consulta revisada y analizar los resultados, lo que incluye las entidades JSON para cualquier elemento con un campo de **dirección** que contenga el texto "Any St.".
 1. Cierre el editor de consultas SQL y descarte los cambios.
 
-    Ha visto cómo crear y consultar entidades JSON en una base de datos de Cosmos DB mediante la interfaz del explorador de datos de Azure Portal. En un escenario real, un desarrollador de aplicaciones utilizará uno de los muchos kits de desarrollo de software (SDK) específicos del lenguaje de programación para llamar a la API de núcleo (SQL) y trabajar con datos en la base de datos.
+    Ha visto cómo crear y consultar entidades JSON en una base de datos de Cosmos DB mediante la interfaz del explorador de datos de Azure Portal. En un escenario real, un desarrollador de aplicaciones utilizará uno de los muchos kits de desarrollo de software (SDK) específicos del lenguaje de programación para llamar a la API de NoSQL y trabajar con datos en la base de datos.
 
 > **Sugerencia**: Si ha terminado de explorar Azure Cosmos DB, puede eliminar el grupo de recursos que creó en este ejercicio.
