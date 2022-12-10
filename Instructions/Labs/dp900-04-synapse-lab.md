@@ -35,7 +35,7 @@ Para usar Azure Synapse Analytics, debe aprovisionar un recurso en el área de t
         - Norte de Europa
         - Centro-sur de EE. UU.
         - Sudeste de Asia
-        - Sur de Reino Unido
+        - Sur de Reino Unido 2
         - Oeste de Europa
         - Oeste de EE. UU.
         - WestUS 2
