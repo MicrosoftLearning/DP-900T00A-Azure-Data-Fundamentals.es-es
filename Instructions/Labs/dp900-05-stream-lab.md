@@ -58,9 +58,7 @@ Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la 
 
     Si no se muestran los tres recursos, haga clic en el botón **&#8635; Actualizar** hasta que aparezcan.
 
-    > **Nota**: Si usa el espacio aislado de Learn, el grupo de recursos también puede contener una segunda *cuenta de almacenamiento* llamada **cloudshell*xxxxxxxx***, que se usará a fin de almacenar datos para la instancia de Azure Cloud Shell que ha usado para ejecutar el script de configuración.
-
-3. Seleccione el trabajo de Stream Analytics **stream*xxxxxxxxxxxxx*** y consulte la información en la página **Información general** y tenga en cuenta los siguientes detalles:
+ 3. Seleccione el trabajo de Stream Analytics **stream*xxxxxxxxxxxxx*** y consulte la información en la página **Información general** y tenga en cuenta los siguientes detalles:
     - El trabajo tiene una *entrada* llamada **iotinput** y una *salida* llamada **bloboutput**. Hacen referencia a la instancia de IoT Hub y a la cuenta de almacenamiento creada por el script de configuración.
     - El trabajo tiene una *consulta*, que lee datos de la entrada **iotinput**, los suma al contar el número de mensajes procesados cada 10 segundos y escribe los resultados en la salida **bloboutput**.
 
