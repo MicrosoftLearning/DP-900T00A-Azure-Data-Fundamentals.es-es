@@ -1,10 +1,10 @@
-# <a name="dp-900-trainer-lab-mapping"></a>Diseño del laboratorio para entrenadores de DP-900
+# Diseño del laboratorio para entrenadores de DP-900
 
 El curso DP-900: Fundamentos de datos de Microsoft Azure tiene un conjunto de laboratorios diseñados para el aprendizaje dirigido por instructores. 
 
 > Nota: Los instructores pueden elegir pedir a los alumnos que completen uno o varios laboratorios por su cuenta mediante los ejercicios de las rutas de aprendizaje de Learn asociadas (https://docs.microsoft.com/users/23110622/collections/0kjyh8rn5gdrjj). 
 
-## <a name="dp-900-module-mapping-to-labs"></a>Asignación del módulo de DP-900 a los laboratorios
+## Asignación del módulo de DP-900 a los laboratorios
 
 | Módulo | Laboratorio | Archivo de marcado |
 | --- | --- | --- |
