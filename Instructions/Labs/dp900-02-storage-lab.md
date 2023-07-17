@@ -4,17 +4,17 @@ lab:
   module: Explore Azure Storage for non-relational data
 ---
 
-# <a name="explore-azure-storage"></a>Exploración de Azure Storage
+# Exploración de Azure Storage
 
 En este ejercicio aprovisionará una cuenta de Azure Storage en su suscripción de Azure y explorará las distintas formas en que puede usarla para almacenar datos.
 
 Este laboratorio se tarda aproximadamente **15** minutos en completarse.
 
-## <a name="before-you-start"></a>Antes de empezar
+## Antes de empezar
 
 Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la que tenga acceso de nivel administrativo.
 
-## <a name="provision-an-azure-storage-account"></a>Aprovisionamiento de una cuenta de Azure Storage
+## Aprovisionamiento de una cuenta de Azure Storage
 
 El primer paso para usar Azure Storage es aprovisionar una cuenta de Azure Storage en su suscripción de Azure.
 
@@ -30,10 +30,10 @@ El primer paso para usar Azure Storage es aprovisionar una cuenta de Azure Stora
 
 1. Seleccione **Siguiente: Opciones avanzadas >** y vea las opciones de configuración avanzada. En concreto, tenga en cuenta que es así donde puede habilitar el espacio de nombres jerárquico para admitir Azure Data Lake Storage Gen2. Deje esta opción **<u>sin seleccionar</u>** (la habilitará más adelante) y seleccione **Siguiente: Redes >** para conocer las opciones de redes correspondientes a la cuenta de almacenamiento.
 1. Seleccione **Siguiente: Protección de datos >** y, luego, en la sección **Recuperación**, <u>anule la </u>selección de todas las opciones **Habilitar eliminación temporal…** . Estas opciones conservan los archivos eliminados para su posterior recuperación, pero pueden causar problemas más adelante cuando se habilite el espacio de nombres jerárquico.
-1. Continúe por el resto de las páginas **Siguiente >** sin cambiar la configuración predeterminada y, luego, en la página **Revisar y crear**, espere la validación de sus selecciones y seleccione **Crear** para crear una cuenta de Azure Storage.
+1. Continúe por el resto de las páginas **Siguiente >** sin cambiar la configuración predeterminada y, luego, en la página **Revisar**, espere la validación de sus selecciones y elija **Crear** para crear una cuenta de Azure Storage.
 1. Espere a que la implementación finalice. Luego, vaya al recurso que se implementó.
 
-## <a name="explore-blob-storage"></a>Exploración de almacenamiento de blobs
+## Exploración de almacenamiento de blobs
 
 Ahora que tiene una cuenta de Azure Storage, puede crear un contenedor para los datos de blobs.
 
@@ -62,7 +62,7 @@ Ahora que tiene una cuenta de Azure Storage, puede crear un contenedor para los 
 1. Seleccione el icono **&#x2027;&#x2027;&#x2027;** que aparece en el extremo derecho de la carpeta y observe que no muestra ninguna opción. Las carpetas de un contenedor de blobs de espacio de nombres plano son virtuales y no se pueden administrar.
 1. Use el icono **X** que está en la parte superior derecha de la página **data** para cerrarla y vuelva a la página **Contenedores**.
 
-## <a name="explore-azure-data-lake-storage-gen2"></a>Exploración de Azure Data Lake Storage Gen2
+## Exploración de Azure Data Lake Storage Gen2
 
 La compatibilidad con Azure Data Lake Store Gen2 le permite usar carpetas jerárquicas para organizar y administrar el acceso a los blobs. También le permite utilizar Azure Blob Storage para hospedar sistemas de archivos distribuidos para plataformas comunes de análisis de macrodatos.
 
@@ -79,7 +79,7 @@ La compatibilidad con Azure Data Lake Store Gen2 le permite usar carpetas jerá
 1. Seleccione el icono **&#x2027;&#x2027;&#x2027;** que aparece en el extremo derecho de la carpeta y observe que, si el espacio de nombres jerárquico está habilitado, puede hacer tareas de configuración en el nivel de carpeta, incluido el cambio de nombre de carpetas y la configuración de permisos.
 1. Use el icono **X** que está en la parte superior derecha de la página **data** para cerrarla y vuelva a la página **Contenedores**.
 
-## <a name="explore-azure-files"></a>Explorar Azure Files
+## Explorar Azure Files
 
 Azure Files proporciona una manera de crear recursos compartidos de archivos basados en la nube.
 
@@ -89,7 +89,7 @@ Azure Files proporciona una manera de crear recursos compartidos de archivos bas
 1. En la parte superior de la página, seleccione **Conectar**. Luego, en el panel **Conectar**, observe que hay pestañas para los sistemas operativos comunes (Windows, Linux y macOS) que contienen scripts que puede ejecutar para conectarse a la carpeta compartida desde un equipo cliente.
 1. Cierre el panel **Conectar** y, luego, cierre la página **files** para volver a la página **Recursos compartidos de archivos** de la cuenta de Azure Storage.
 
-## <a name="explore-azure-tables"></a>Exploración de tablas de Azure
+## Exploración de tablas de Azure
 
 Las tablas de Azure proporcionan un almacén de clave-valor para las aplicaciones que necesitan almacenar valores de datos, pero que no necesitan la funcionalidad y la estructura completas de una base de datos relacional.
 
@@ -104,7 +104,7 @@ Las tablas de Azure proporcionan un almacén de clave-valor para las aplicacione
     - **RowKey**: 1
 1. Seleccione **Agregar propiedad** y cree una propiedad con estos valores:
 
-    |Nombre de propiedad | Tipo | Value |
+    |Nombre de propiedad | Tipo | Valor |
     | ------------ | ---- | ----- |
     | Nombre | String | Widget |
 
