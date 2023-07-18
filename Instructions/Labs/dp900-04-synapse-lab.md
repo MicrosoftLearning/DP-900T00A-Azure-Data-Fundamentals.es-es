@@ -4,17 +4,17 @@ lab:
   module: Explore fundamentals of large-scale data warehousing
 ---
 
-# <a name="explore-data-analytics-in-azure-with-azure-synapse-analytics"></a>Exploración del análisis de datos en Azure con Azure Synapse Analytics
+# Exploración del análisis de datos en Azure con Azure Synapse Analytics
 
 En este ejercicio aprovisionará un área de trabajo de Azure Synapse Analytics en su suscripción de Azure y lo usará para ingerir y consultar datos.
 
 Este laboratorio se tarda aproximadamente **30** minutos en completarse.
 
-## <a name="before-you-start"></a>Antes de empezar
+## Antes de empezar
 
 Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la que tenga acceso de nivel administrativo.
 
-## <a name="provision-an-azure-synapse-analytics-workspace"></a>Aprovisionar un área de trabajo de Azure Synapse Analytics
+## Aprovisionar un área de trabajo de Azure Synapse Analytics
 
 Para usar Azure Synapse Analytics, debe aprovisionar un recurso en el área de trabajo de Azure Synapse Analytics en la suscripción de Azure.
 
@@ -53,7 +53,7 @@ Para usar Azure Synapse Analytics, debe aprovisionar un recurso en el área de t
 
     ![Imagen que muestra el menú expandido de Synapse Studio para administrar recursos y realizar tareas de análisis de datos.](images/synapse-studio.png)
 
-## <a name="ingest-data"></a>Ingerir datos
+## Ingerir datos
 
 Una de las tareas clave que puede realizar con Azure Synapse Analytics es definir *canalizaciones* que transfieran (y, si es necesario, transformen) datos de una amplia variedad de orígenes al área de trabajo para su análisis.
 
@@ -61,7 +61,7 @@ Una de las tareas clave que puede realizar con Azure Synapse Analytics es defini
 2. En la herramienta Copiar datos, en el paso **Propiedades**, asegúrese de que las opciones **Built-in copy task** (Tarea de copia integrada) y **Run once now** (Ejecutar una vez ahora) están seleccionadas y haga clic en **Siguiente >**.
 3. En el paso **Origen**, en el subpaso **Conjunto de datos**, seleccione la siguiente configuración:
     - **Tipo de origen**: todos
-    - **Conexión**: *cree una conexión y, en el panel **Nueva conexión** que aparece, en la pestaña **Archivo**, seleccione **HTTP**. Después, continúe y cree una conexión a un archivo de datos mediante la siguiente configuración:*
+    - **Conexión**: *cree una conexión y, en el panel **Nueva conexión** que aparece, en la pestaña **Protocolo genérico**, seleccione **HTTP**. Después, continúe y cree una conexión a un archivo de datos mediante la siguiente configuración:*
         - **Nombre**: productos de AdventureWorks
         - **Descripción**: lista de productos a través de HTTP
         - **Conectar mediante Integration Runtime**: AutoResolveIntegrationRuntime
@@ -112,7 +112,7 @@ Una de las tareas clave que puede realizar con Azure Synapse Analytics es defini
 
     ![Imagen en la que se muestra la jerarquía de Azure Data Lake Storage Gen 2 expandida de Synapse Studio con el almacenamiento de archivos de su área de trabajo de Synapse.](images/synapse-storage.png)
 
-## <a name="use-a-sql-pool-to-analyze-data"></a>Usar un grupo de SQL para analizar datos
+## Usar un grupo de SQL para analizar datos
 
 Ahora que ha ingerido algunos datos en el área de trabajo, puede usar Synapse Analytics para consultarlos y analizarlos. Una de las formas más comunes de consultar datos es usar SQL y, en Synapse Analytics, puede usar un *grupo de SQL* para ejecutar código SQL.
 
@@ -210,7 +210,7 @@ Ahora que ha ingerido algunos datos en el área de trabajo, puede usar Synapse A
 
     ![Imagen que muestra la vista del gráfico de recuento de productos](images/column-chart.png)
 
-## <a name="use-a-spark-pool-to-analyze-data"></a>Usar un grupo de Spark para analizar datos
+## Usar un grupo de Spark para analizar datos
 
 Aunque SQL es un lenguaje común para consultar conjuntos de datos estructurados, muchos analistas de datos consideran que lenguajes como Python son útiles para explorar y preparar los datos para su análisis. En Azure Synapse Analytics, puede ejecutar código de Python (y otro) en un *Grupo de Spark*, que usa un motor de procesamiento de datos distribuido basado en Apache Spark.
 
@@ -291,7 +291,7 @@ Aunque SQL es un lenguaje común para consultar conjuntos de datos estructurados
 
 15. Cierre el panel **Notebook 1** (Cuaderno 1) y descarte los cambios.
 
-## <a name="delete-azure-resources"></a>Eliminación de recursos de Azure
+## Eliminación de recursos de Azure
 
 Si ha terminado de explorar Azure Synapse Analytics, debe eliminar los recursos que ha creado para evitar costos innecesarios de Azure.
 
