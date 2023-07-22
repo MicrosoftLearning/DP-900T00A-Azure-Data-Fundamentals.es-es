@@ -4,17 +4,19 @@ lab:
   module: Explore fundamentals of real-time analytics
 ---
 
-# <a name="explore-azure-synapse-data-explorer"></a>Exploración de Data Explorer de Azure Synapse
+# Exploración de Data Explorer de Azure Synapse
+
+> **Nota**: Debido a los cambios en el producto, hay algunos problemas conocidos con la sección **Creación de una base de datos e ingesta de datos** de este laboratorio. Estamos trabajando para solucionar estos problemas.
 
 En este ejercicio, usará Azure Synapse Data Explorer para analizar datos de serie temporal.
 
 Este laboratorio se tarda aproximadamente **25** minutos en completarse.
 
-## <a name="before-you-start"></a>Antes de empezar
+## Antes de empezar
 
 Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la que tenga acceso de nivel administrativo.
 
-## <a name="provision-a-synapse-analytics-workspace"></a>Aprovisionar un área de trabajo de Synapse Analytics
+## Aprovisionar un área de trabajo de Synapse Analytics
 
 > **Sugerencia**: Si todavía tiene un área de trabajo de Azure Synapse de un ejercicio anterior, omita esta sección y vaya directamente a **[Creación de un grupo de Data Explorer](#create-a-data-explorer-pool)** .
 
@@ -39,9 +41,9 @@ Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la 
 1. Espere a que se cree el área de trabajo; puede tardar unos cinco minutos.
 1. Una vez completada la implementación, vaya al grupo de recursos que se creó y observe que contiene el área de trabajo de Synapse Analytics y una cuenta de almacenamiento de Data Lake.
 1. Seleccione el área de trabajo de Synapse y, en su página **Información general**, en la tarjeta **Abrir Synapse Studio**, seleccione **Abrir** para abrir Synapse Studio en una nueva pestaña del explorador. Synapse Studio es una interfaz basada en web que puede usar para trabajar con el área de trabajo de Synapse Analytics.
-1. En el lado izquierdo de Synapse Studio, use el icono **&rsaquo;&rsaquo;** para expandir el menú; esto muestra las distintas páginas de Synapse Studio que usará a fin de administrar recursos y realizar tareas de análisis de datos.
+1. En el lado izquierdo de Synapse Studio, use el icono **&rsaquo;&rsaquo;** para expandir el menú; se muestran las distintas páginas de Synapse Studio que usará para administrar recursos y realizar tareas de análisis de datos.
 
-## <a name="create-a-data-explorer-pool"></a>Crear un grupo de Data Explorer
+## Crear un grupo de Data Explorer
 
 1. En Synapse Studio, seleccione la página **Administrar**.
 1. Seleccione la pestaña **Grupos de Data Explorer** y, luego, utilice el icono **&#65291; Nuevo** para crear un grupo con esta configuración:
@@ -51,7 +53,7 @@ Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la 
 1. Seleccione **Siguiente: Configuración adicional >** y habilite la opción **Ingesta de streaming**. Esto permite habilitar Data Explorar para ingerir datos nuevos desde un origen de streaming como Azure Event Hubs.
 1. Seleccione **Revisar y crear** para crear el grupo de Data Explorer y, luego, espere a que se implemente (lo que puede tardar 15 minutos o más; el estado cambiará de *Creando* a *En línea*).
 
-## <a name="create-a-database-and-ingest-data"></a>Creación de una base de datos e ingesta de datos
+## Creación de una base de datos e ingesta de datos
 
 1. En Synapse Studio, seleccione la página **Datos**.
 1. Asegúrese de que la pestaña **Área de trabajo** esté seleccionada y, si es necesario, seleccione el icono **&#8635;** que se encuentra en la parte superior izquierda de la página para actualizar la vista de modo que se muestre la opción **Bases de datos de Data Explorer**.
@@ -92,7 +94,7 @@ Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la 
 
     >                 **Sugerencia**: En este ejemplo, ha importado una cantidad muy pequeña de datos por lotes desde un archivo, lo que sirve para los fines de este ejercicio. En realidad, puede usar Data Explorer para analizar volúmenes de datos mucho más grandes y, como habilitó la ingesta de flujos, también podría haber configurado Data Explorer para ingerir datos en la tabla desde un origen de streaming como Azure Event Hubs.
 
-## <a name="use-kusto-query-language-to-query-the-table-in-synapse-studio"></a>Uso del lenguaje de consulta Kusto para consultar la tabla en Synapse Studio
+## Uso del lenguaje de consulta Kusto para consultar la tabla en Synapse Studio
 
 1. Cierre la pestaña del explorador de Azure Data Explorer y vuelva a la pestaña que contiene Synapse Studio.
 1. En la página **Datos**, expanda la base de datos **iot-data** y su carpeta **Tablas**. Luego, en el menú **…** de la tabla **devices**, seleccione **Nuevo script de KQL** > **Tomar 1000 filas**.
@@ -137,7 +139,7 @@ Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la 
 
 1. Cierre la pestaña de la consulta de KQL y descarte los cambios.
 
-## <a name="delete-azure-resources"></a>Eliminación de recursos de Azure
+## Eliminación de recursos de Azure
 
 Ahora que ha terminado de explorar Azure Synapse Analytics, debe eliminar los recursos que ha creado para evitar costos innecesarios de Azure.
 

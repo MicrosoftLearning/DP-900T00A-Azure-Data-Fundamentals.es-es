@@ -4,24 +4,24 @@ lab:
   module: Explore fundamentals of data visualization
 ---
 
-# <a name="explore-fundamentals-of-data-visualization-with-power-bi"></a>Exploración de los aspectos básicos de la visualización de datos con Power BI
+# Exploración de los aspectos básicos de la visualización de datos con Power BI
 
 En este ejercicio usará Microsoft Power BI Desktop para crear un modelo de datos y un informe que contenga visualizaciones de datos interactivas.
 
 Este laboratorio se tarda aproximadamente **20** minutos en completarse.
 
-## <a name="before-you-start"></a>Antes de empezar
+## Antes de empezar
 
 Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la que tenga acceso de nivel administrativo.
 
-### <a name="install-power-bi-desktop"></a>Instalar Power BI Desktop
+### Instalar Power BI Desktop
 
 Si Microsoft Power BI Desktop no está instalado aún en el equipo de Windows, puede descargarlo e instalarlo de forma gratuita.
 
 1. Descargue el instalador de Power BI Desktop de [https://aka.ms/power-bi-desktop](https://aka.ms/power-bi-desktop?azure-portal=true).
 1. Cuando el archivo se haya descargado, ábralo e instale Power BI Desktop en el equipo mediante el asistente para instalación. Esta instalación puede tardar unos minutos.
 
-## <a name="import-data"></a>Importar datos
+## Importar datos
 
 1. Abra Power BI Desktop. La interfaz de la aplicación debe tener un aspecto similar al siguiente:
 
@@ -63,7 +63,7 @@ Si Microsoft Power BI Desktop no está instalado aún en el equipo de Windows,
     https://github.com/MicrosoftLearning/DP-900T00A-Azure-Data-Fundamentals/raw/master/power-bi/orders.csv
     ```
 
-## <a name="explore-a-data-model"></a>Exploración de un modelo de datos
+## Exploración de un modelo de datos
 
 Las tres tablas de datos que ha importado se han cargado en un modelo de datos, que ahora explorará y refinará.
 
@@ -86,14 +86,14 @@ Las tres tablas de datos que ha importado se han cargado en un modelo de datos, 
 
     ![Captura de pantalla en la que se muestra cómo cambiar el nombre de la jerarquía en Power BI.](images/rename-hierarchy.png)
 
-1. En el borde izquierdo, seleccione la pestaña **Datos** y, a continuación, en el panel **Campos**, seleccione la tabla **customers** (clientes).
+1. En el borde izquierdo, seleccione la pestaña **Vista de datos** y, luego, en el panel **Datos**, seleccione la tabla **customers**.
 1. Seleccione el encabezado de columna **Ciudad** y, a continuación, establezca su propiedad **Categoría de datos** en **Ciudad**:
 
     ![Captura de pantalla en la que se muestra cómo establecer una categoría de datos en Power BI.](images/data-category.png)
 
     Este paso garantizará que los valores de esta columna se interpreten como nombres de ciudad, lo que puede ser útil si piensa incluir visualizaciones de mapa.
 
-## <a name="create-a-report"></a>Creación de un informe
+## Creación de un informe
 
 Ahora ya está casi listo para crear un informe. En primer lugar, debe comprobar algunas configuraciones para asegurarse de que todas las visualizaciones están habilitadas.
 
@@ -103,7 +103,7 @@ Ahora ya está casi listo para crear un informe. En primer lugar, debe comprobar
 
     Esta configuración garantiza que pueda incluir visualizaciones de mapas en los informes.
 
-1. En el borde izquierdo, seleccione la pestaña **Informe** y fíjese en la interfaz de diseño del informe.
+1. En el borde izquierdo, seleccione la pestaña **Vista de informe** y vea la interfaz de diseño del informe.
 
     ![Captura de pantalla en la que se muestra la pestaña Informe en Power BI.](images/report-tab.png)
 
@@ -111,11 +111,11 @@ Ahora ya está casi listo para crear un informe. En primer lugar, debe comprobar
 
     ![Captura de pantalla en la que se muestra cómo agregar un cuadro de texto en Power BI.](images/text-box.png)
 
-1. Seleccione cualquier área vacía del informe para que se deseleccione el cuadro de texto. A continuación, en el panel **Campos**, expanda **Productos** y seleccione el campo **Productos clasificados**. En este paso se agrega una tabla al informe.
+1. Seleccione cualquier área vacía del informe para que se deseleccione el cuadro de texto. A continuación, en el panel **Datos**, expanda **Productos** y seleccione el campo **Productos clasificados**. En este paso se agrega una tabla al informe.
 
     ![Captura de pantalla en la que se muestra cómo agregar una tabla de productos clasificados a un informe en Power BI.](images/categorized-products-table.png)
 
-1. Con la tabla aún seleccionada, en el panel **Campos**, expanda **Pedidos** y seleccione **Ingresos**. Se agrega una columna Ingresos a la tabla. Es posible que tenga que ampliar el tamaño de la tabla para verla.
+1. Con la tabla aún seleccionada, en el panel **Datos**, expanda **Pedidos** y seleccione **Ingresos**. Se agrega una columna Ingresos a la tabla. Es posible que tenga que ampliar el tamaño de la tabla para verla.
 
     A los ingresos se les aplica un formato de moneda, como se especificó en el modelo. Sin embargo, no especificó el número de posiciones decimales, por lo que los valores incluyen cantidades fraccionales. Aunque no es relevante para las visualizaciones que vaya a crear, pero podría volver a la pestaña **Modelo** o **Datos** y cambiar las posiciones decimales si quiere.
 
@@ -125,17 +125,17 @@ Ahora ya está casi listo para crear un informe. En primer lugar, debe comprobar
 
     ![Captura de pantalla en la que se muestra un gráfico de columnas apiladas de productos clasificados con ingresos en un informe.](images/stacked-column-chart.png)
 
-1. Encima del gráfico de columnas seleccionado, seleccione el icono **&#8595;** para activar la exploración en profundidad. A continuación, en el gráfico, seleccione la segunda columna (*Bicicletas de carretera*) para explorar en profundidad y ver los ingresos de los productos de esta categoría. Esta funcionalidad es posible porque ha definido una jerarquía de categorías y productos.
+1. Encima del gráfico de columnas seleccionado, seleccione el icono **&#8595;** para activar la exploración en profundidad. A continuación, en el gráfico, seleccione la segunda columna para explorar en profundidad y ver los ingresos de los productos de esta categoría. Esta funcionalidad es posible porque ha definido una jerarquía de categorías y productos.
 
     ![Captura de pantalla en la que se muestra un gráfico de columnas explorado en profundidad para ver los productos de una categoría.](images/drill-down.png)
 
 1. Use el icono **&#x2191;** para obtener una exploración inversa de nivel de categoría. Después, seleccione el icono **(** &#8595; **)** para desactivar la característica de exploración en profundidad.
-1. Seleccione un área en blanco del informe y, a continuación, en el panel **Campos**, seleccione el campo **Cantidad** en la tabla **orders** y el campo **Categoría** de la tabla **products**. En este paso se genera otro gráfico de columnas en el que se muestra la cantidad de ventas por categoría de producto.
+1. Seleccione un área en blanco del informe y, luego, en el panel **Datos**, elija el campo **Cantidad** en la tabla **orders** y el campo **Categoría** en la tabla **products**. En este paso se genera otro gráfico de columnas en el que se muestra la cantidad de ventas por categoría de producto.
 1. Con el nuevo gráfico de columnas seleccionado, en el panel **Visualizaciones**, seleccione **Gráfico circular** y, a continuación, cambie el tamaño del gráfico y colóquelo junto al gráfico de columnas de ingresos por categoría.
 
     ![Captura de pantalla en la que se muestra un gráfico circular en el que se muestra la cantidad de ventas por categoría.](images/category-pie-chart.png)
 
-1. Seleccione un área en blanco del informe y, a continuación, en el panel **Campos**, seleccione el campo **Ciudad** en la tabla **customers** y, a continuación, seleccione el campo **Ingresos** en la tabla **orders**. Esto da como resultado un mapa en el que se muestran los ingresos por ventas por ciudad. Reorganice y cambie el tamaño de las visualizaciones cuando sea necesario:
+1. Seleccione un área en blanco del informe y, luego, en el panel **Datos**, seleccione el campo **Ciudad** en la tabla **customers** y, luego, seleccione el campo **Ingresos** en la tabla **orders**. Esto da como resultado un mapa en el que se muestran los ingresos por ventas por ciudad. Reorganice y cambie el tamaño de las visualizaciones cuando sea necesario:
 
     ![Captura de pantalla en la que se muestra un mapa en el que se muestran los ingresos por ciudad.](images/revenue-map.png)
 
