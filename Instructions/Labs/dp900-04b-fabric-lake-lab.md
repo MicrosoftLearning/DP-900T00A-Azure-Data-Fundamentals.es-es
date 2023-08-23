@@ -21,7 +21,7 @@ Antes de trabajar con datos de Fabric, cree un área de trabajo con la evaluaci�
 3. Cree una nueva área de trabajo con el nombre que prefiera y seleccione un modo de licencia en la sección **Avanzado** que incluya la capacidad de Fabric (*Prueba*, *Premium* o *Fabric*).
 4. Cuando se abra la nueva área de trabajo, debe estar vacía.
 
-    ![Captura de pantalla de un área de trabajo vacía en Power BI.](./Images/new-workspace.png)
+    ![Captura de pantalla de un área de trabajo vacía en Power BI.](./images/new-workspace.png)
 
 ## Creación de un almacén de lago
 
@@ -37,7 +37,7 @@ Ahora que tiene un área de trabajo, es el momento de cambiar a la experiencia *
 
     Después de un minuto o así, se habrá creado un nuevo almacén de lago:
 
-    ![Captura de pantalla de un nuevo almacén de lago.](./Images/new-lakehouse.png)
+    ![Captura de pantalla de un nuevo almacén de lago.](./images/new-lakehouse.png)
 
 3. Vea el nuevo almacén de lago y tenga en cuenta que el panel **Explorador del almacén de lago** de la izquierda le permite examinar las tablas y los archivos del almacén de lago:
     - La carpeta **Tablas** contiene tablas que puede consultar usando SQL. Las tablas de un almacén de lago de Microsoft Fabric se basan en el formato de archivo de *Delta Lake* de código abierto, que se usa habitualmente en Apache Spark.
@@ -52,7 +52,7 @@ Una manera sencilla de ingerir datos consiste en usar una actividad **Copiar dat
 1. En la página **Inicio** del almacén de lago, en el menú **Obtener datos** seleccione **Nueva canalización de datos** y cree una canalización de datos llamada **Ingerir datos de ventas**.
 1. En el Asistente para **copiar datos**, en la página **Elegir un origen de datos**, seleccione el conjunto de datos de ejemplo **Modelo de datos de minoristas de importadores de todo el mundo**.
 
-    ![Captura de pantalla de la página "Elegir origen de datos".](./Images/choose-data-source.png)
+    ![Captura de pantalla de la página "Elegir origen de datos".](./images/choose-data-source.png)
 
 1. Seleccione **Siguiente** y vea las tablas del origen de datos en la página **Conectarse al origen de datos**.
 1. Seleccione la tabla **dimension_stock_item**, que contiene registros de productos. A continuación, seleccione **Siguiente** para avanzar a la página **Elegir destino de datos**.
@@ -60,25 +60,25 @@ Una manera sencilla de ingerir datos consiste en usar una actividad **Copiar dat
 1. Establezca las siguientes opciones de destino de datos y, luego, seleccione **Siguiente**:
     - **Carpeta raíz**: Tablas
     - **Configuración de carga**: cargar en una nueva tabla
-    - **Nombre de la tabla de destino**: dimProduct
+    - **Nombre de la tabla de destino**: dimension_stock_item
     - **Asignaciones de columnas**: *deje las asignaciones predeterminadas tal cual*
     - **Habilitar partición**: *no seleccionada*
-1. En la página **Revisar _ guardar**, asegúrese de que la opción **Iniciar transferencia de datos inmediatamente** esté activa y, a continuación, seleccione **Guardar y ejecutar**.
+1. En la página **Revisar y guardar**, asegúrese de que la opción **Iniciar transferencia de datos inmediatamente** esté activa y, a continuación, seleccione **Guardar y ejecutar**.
 
     Se crea una nueva canalización que contiene una actividad **Copiar datos**, como se muestra aquí:
 
-    ![Captura de pantalla de una canalización con una actividad Copiar datos.](./Images/copy-data-pipeline.png)
+    ![Captura de pantalla de una canalización con una actividad Copiar datos.](./images/copy-data-pipeline.png)
 
     Cuando la canalización comienza a ejecutarse, puede supervisar su estado en el panel **Salida** en el diseñador de canalizaciones. Use el icono **&#8635;** (*Actualizar*) para actualizar el estado y espere hasta que la operación se haya realizado correctamente.
 
 1. En la barra de menús central, a la izquierda, seleccione el almacén de lago.
-1. En la página **Inicio**, en el panel **Explorador de almacén de lago**, expanda **Tablas** y compruebe que se ha creado la tabla **dimProduct**.
+1. En la página **Inicio**, en el panel **Explorador de almacén de lago**, expanda **Tablas** y compruebe que se ha creado la tabla **dimension_stock_item**.
 
     > **Nota**: Si la nueva tabla aparece como *no identificada*, use el botón **Actualizar** de la barra de herramientas del almacén de lago para actualizar la vista.
 
-1. Seleccione la tabla **dimProduct** para ver su contenido.
+1. Seleccione la tabla **dimension_stock_item** para ver su contenido.
 
-    ![Captura de pantalla de la tabla dimProduct.](./images/dimProduct.png)
+    ![Captura de pantalla de la tabla dimension_stock_item.](./images/dimProduct.png)
 
 ## Consulta de datos en un almacén de lago
 
@@ -92,7 +92,7 @@ Ahora que ha ingerido datos en una tabla de almacén de lago, puede usar SQL par
 
     ```sql
     SELECT Brand, COUNT(StockItemKey) AS Products
-    FROM dimProduct
+    FROM dimension_stock_item
     GROUP BY Brand
     ```
 
@@ -110,16 +110,16 @@ Los almacenes de lago de Microsoft Fabric organizan todas las tablas en un mode
 
 1. En la barra de herramientas, seleccione **Nuevo informe** para abrir una nueva pestaña del explorador que contiene el diseñador de informes de Power BI.
 1. En el diseñador de informes:
-    1. En el panel **Datos**, expanda la tabla **dimProduct** y seleccione los campos **Brand** y **StockItemKey**.
-    1. En el panel **Visualizaciones**, seleccione la visualización **Gráfico de barras apiladas** (es la primera que aparece). A continuación, asegúrese de que el **eje Y** contiene el campo **Brand** y cambie la agregación del **eje X** a **Count** para que contenga el campo **Count of StockItemKey**.
-    
+    1. En el panel **Datos**, expanda la tabla **dimension_stock_item** y seleccione los campos **Brand** y **StockItemKey**.
+    1. En el panel **Visualizaciones**, seleccione la visualización **Gráfico de barras apiladas** (es la primera que aparece). A continuación, asegúrese de que el **eje Y** contiene el campo **Brand** y cambie la agregación del **eje X** a **Count** para que contenga el campo **Count of StockItemKey**. Por último, cambie el tamaño de la visualización en el lienzo del informe para rellenar el espacio disponible.
+
         ![Captura de pantalla de un informe de Power BI.](./images/fabric-report.png)
 
     > **Sugerencia**: Puede usar los iconos **>>** para ocultar los paneles del diseñador de informes con el fin de ver el informe con más claridad.
 
 1. En el menú **Archivo**, seleccione **Guardar** para guardar el informe como **Brand Quantity Report** en el área de trabajo de Fabric.
 
-    Puede cerrar la pestaña del explorador que contiene el informe para volver a su almacén de lago. Puede encontrar el informe en la página del área de trabajo en el portal de Microsoft Fabric.
+    Ahora puede cerrar la pestaña del explorador que contiene el informe para volver a su almacén de lago. Puede encontrar el informe en la página del área de trabajo en el portal de Microsoft Fabric.
 
 ## Limpieza de recursos
 
