@@ -10,7 +10,7 @@ En este ejercicio, explorará la ingesta y el análisis de datos en un almacén 
 
 Este laboratorio se tarda aproximadamente **25** minutos en completarse.
 
-> **Nota**: Necesitará una licencia de Microsoft Fabric para realizar este ejercicio. Consulte [Introducción a Microsoft Fabric](https://learn.microsoft.com/fabric/get-started/fabric-trial) para obtener más información sobre cómo habilitar una licencia de evaluación de Fabric gratuita. Para hacerlo, necesitará una cuenta *profesional* o *educativa* de Microsoft. Si no tiene una, puede [registrarse para obtener una evaluación gratuita de Microsoft Office 365 E3 o superior](https://www.microsoft.com/microsoft-365/business/compare-more-office-365-for-business-plans).
+> **Nota:** Necesitará una licencia de Microsoft Fabric para realizar este ejercicio. Consulte [Introducción a Fabric](https://learn.microsoft.com/fabric/get-started/fabric-trial) para más información sobre cómo habilitar una licencia de prueba de Fabric gratuita. Para ello, necesitará una cuenta *profesional* o *educativa* de Microsoft. Si no tiene una, puede [registrarse para una evaluación gratuita de Microsoft Office 365 E3 o superior](https://www.microsoft.com/microsoft-365/business/compare-more-office-365-for-business-plans).
 
 ## Crear un área de trabajo
 
@@ -113,7 +113,7 @@ Los almacenes de lago de Microsoft Fabric organizan todas las tablas en un mode
     1. En el panel **Datos**, expanda la tabla **dimension_stock_item** y seleccione los campos **Brand** y **StockItemKey**.
     1. En el panel **Visualizaciones**, seleccione la visualización **Gráfico de barras apiladas** (es la primera que aparece). A continuación, asegúrese de que el **eje Y** contiene el campo **Brand** y cambie la agregación del **eje X** a **Count** para que contenga el campo **Count of StockItemKey**. Por último, cambie el tamaño de la visualización en el lienzo del informe para rellenar el espacio disponible.
 
-        ![Captura de pantalla de un informe de Power BI.](./images/fabric-report.png)
+        ![Captura de pantalla de un informe de Power BI](./images/fabric-report.png)
 
     > **Sugerencia**: Puede usar los iconos **>>** para ocultar los paneles del diseñador de informes con el fin de ver el informe con más claridad.
 
