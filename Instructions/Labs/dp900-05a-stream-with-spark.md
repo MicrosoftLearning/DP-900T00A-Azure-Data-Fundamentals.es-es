@@ -20,7 +20,7 @@ Para usar Synapse Analytics, debe aprovisionar un recurso en el área de trabajo
 
 1. Abra Azure Portal en [Azure Portal](https://portal.azure.com?azure-portal=true) e inicie sesión con las credenciales asociadas con su suscripción de Azure.
 
-    >                 **Nota**: Asegúrese de que está trabajando en el directorio que contiene su propia suscripción, lo que se indica en la parte superior derecha, debajo del identificador de usuario. Si no es así, seleccione el icono de usuario y cambie el directorio.
+    > **Nota**: Asegúrese de que está trabajando en el directorio que contiene su propia suscripción, lo que se indica en la parte superior derecha, debajo del identificador de usuario. Si no es así, seleccione el icono de usuario y cambie el directorio.
 
 2. En la página **Inicio** de Azure Portal, use el icono **&#65291; Crear un recurso** para crear un recurso.
 3. Busque *Azure Synapse Analytics*, y cree un recurso de **Azure Synapse Analytics** con la siguiente configuración:
@@ -33,7 +33,7 @@ Para usar Synapse Analytics, debe aprovisionar un recurso en el área de trabajo
         - **Nombre de cuenta**: *cree una cuenta con un nombre único, por ejemplo, "datalake<your_name>"*.
         - **Nombre del sistema de archivos**: *cree un sistema de archivos con un nombre único, por ejemplo, "fs<your_name>"*.
 
-    >                 **Nota**: Un área de trabajo de Synapse Analytics requiere dos grupos de recursos en la suscripción de Azure; uno para los recursos creados explícitamente y otro para los recursos administrados que utiliza el servicio. También requiere una cuenta de almacenamiento de Data Lake en la que almacenar datos, scripts y otros artefactos.
+    > **Nota**: Un área de trabajo de Synapse Analytics requiere dos grupos de recursos en la suscripción de Azure; uno para los recursos creados explícitamente y otro para los recursos administrados que utiliza el servicio. También requiere una cuenta de almacenamiento de Data Lake en la que almacenar datos, scripts y otros artefactos.
 
 4. Cuando haya especificado estos detalles, seleccione **Revisar y crear** y, a continuación, seleccione **Crear** para crear el área de trabajo.
 5. Espere a que se cree el área de trabajo; puede tardar unos cinco minutos.
@@ -67,7 +67,7 @@ Para explorar el procesamiento de flujos con Spark, usará un cuaderno que conti
 
 ## Eliminación de recursos de Azure
 
->                 **Nota**: Si tiene previsto completar otros ejercicios que usan Azure Synapse Analytics, puede omitir esta sección. De lo contrario, siga los pasos que se indican a continuación para evitar costos innecesarios de Azure.
+> **Nota**: Si tiene previsto completar otros ejercicios que usan Azure Synapse Analytics, puede omitir esta sección. De lo contrario, siga los pasos que se indican a continuación para evitar costos innecesarios de Azure.
 
 1. Cierre la pestaña del explorador de Synapse Studio, sin guardar los cambios, y vuelva a Azure Portal.
 1. En Azure Portal, en la página **Inicio**, seleccione **Grupos de recursos**.

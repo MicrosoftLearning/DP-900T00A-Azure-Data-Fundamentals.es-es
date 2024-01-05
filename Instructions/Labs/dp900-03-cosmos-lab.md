@@ -19,7 +19,7 @@ Para usar Cosmos DB, debe aprovisionar una cuenta de Cosmos DB en su suscripció
 
 1. En Azure Portal, seleccione **+ Crear un recurso** en la parte superior izquierda y busque *Azure Cosmos DB*.  En los resultados, seleccione **Azure Cosmos DB** y luego **Crear**.
 1. En el icono de **Azure Cosmos DB for NoSQL**, seleccione **Crear**.
-1. Escriba los detalles siguientes y seleccione **Revisar y crear**: 
+1. Escriba los detalles siguientes y seleccione **Revisar y crear**:
     - **Suscripción**: si usa un espacio aislado, seleccione la opción *Concierge Subscription* (Suscripción de Concierge). En caso contrario, seleccione su suscripción de Azure.
     - **Grupo de recursos**: si usa un espacio aislado, seleccione el grupo de recursos existente (que tendrá un nombre como *learn-xxxx…* ). De lo contrario, cree un grupo de recursos con el nombre que prefiera.
     - **Nombre de cuenta**: escriba un nombre único
