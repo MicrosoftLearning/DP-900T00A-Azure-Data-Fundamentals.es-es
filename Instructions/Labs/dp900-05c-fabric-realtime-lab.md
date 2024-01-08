@@ -23,7 +23,7 @@ Antes de trabajar con datos de Fabric, cree un área de trabajo con la evaluaci�
 
     ![Captura de pantalla de un área de trabajo vacía en Power BI.](./images/new-workspace.png)
 
-## Crear una base de datos KQL
+## Creación de una base de datos KQL
 
 Ahora que tiene un área de trabajo, puede crear una base de datos de KQL para almacenar datos en tiempo real.
 
@@ -35,9 +35,20 @@ Ahora que tiene un área de trabajo, puede crear una base de datos de KQL para a
 
 2. En la página principal del análisis en tiempo real, cree una nueva **base de datos de KQL** con el nombre que prefiera.
 
-    Al cabo de un minuto más o menos, se creará una nueva base de datos KQL:
+    ![Captura de pantalla del editor de RTA con la opción Crear base de datos KQL resaltada.](./images/create-kql-db.png)
+
+   Verá una pantalla del panel y, a continuación, seleccionará el botón Base de datos KQL en la parte superior.
 
     ![Captura de pantalla de una nueva base de datos KQL.](./images/kql-database.png)
+
+    Una vez seleccionado, se le proporcionará un cuadro de diálogo ***Nueva base de datos KQL*** donde asignará un nombre a la base de datos KQL.
+
+    ![Captura de pantalla de un cuadro de diálogo para asignar un nuevo nombre de la base de datos KQL.](./images/name-kql-db.png)
+
+   - Asigne un nombre a la base de datos; en este escenario, es `my_kql_db`.
+   - Haga clic en ***Crear***.
+  
+    Al cabo de un minuto más o menos, se creará una nueva base de datos KQL:
 
     Actualmente, no hay tablas en la base de datos.
 
@@ -91,7 +102,7 @@ El flujo de eventos rellena continuamente una tabla en la base de datos KQL, lo 
     ```kql
     // This query returns the number of taxi pickups per hour
     ['taxi-data']
-    | summarize PickupCount = count() by bin(tpep_pickup_datetime, 1h)
+    | summarize PickupCount = count() by bin(todatetime(tpep_pickup_datetime), 1h)
     ```
 
 1. Use el botón **&#9655; Ejecutar** para ejecutar la consulta y revisar los resultados, que muestran el número de recogidas de taxi para cada hora.
