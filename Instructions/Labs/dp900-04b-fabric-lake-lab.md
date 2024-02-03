@@ -84,9 +84,9 @@ Una manera sencilla de ingerir datos consiste en usar una actividad **Copiar dat
 
 Ahora que ha ingerido datos en una tabla de almacén de lago, puede usar SQL para consultarlos.
 
-1. En la parte superior derecha de la página del almacén de lago, cambie al **punto de conexión de SQL** del almacén de lago.
+1. En la parte superior derecha de la página del almacén de lago de datos, cambie al **punto de conexión de análisis SQL** del almacén de lago de datos.
 
-    ![Captura de pantalla del menú del punto de conexión SQL.](./images/endpoint-switcher.png)
+    ![Captura de pantalla del menú del punto de conexión de análisis SQL.](./images/endpoint-switcher.png)
 
 1. En la barra de herramientas, seleccione **Nueva consulta SQL**. A continuación, escriba el código SQL siguiente en el editor de consultas:
 
@@ -102,7 +102,7 @@ Ahora que ha ingerido datos en una tabla de almacén de lago, puede usar SQL par
 
 ## Visualización de datos en un almacén de lago
 
-Los almacenes de lago de Microsoft Fabric organizan todas las tablas en un modelo de datos, que puede usar para crear visualizaciones e informes.
+Los almacenes de lago de datos de Microsoft Fabric organizan todas las tablas en un modelo de datos semántico, que puede usar para crear visualizaciones e informes.
 
 1. En la parte inferior izquierda de la página, en el panel **Explorar**, seleccione la pestaña **Modelo** para ver el modelo de datos de las tablas de un almacén de lago (en este caso solo hay una tabla).
 
