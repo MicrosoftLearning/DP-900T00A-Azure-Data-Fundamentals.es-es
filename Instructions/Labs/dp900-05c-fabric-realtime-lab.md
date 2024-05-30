@@ -27,36 +27,23 @@ Antes de trabajar con datos de Fabric, cree un área de trabajo con la evaluaci�
 
 Ahora que tiene un área de trabajo, puede crear una base de datos de KQL para almacenar datos en tiempo real.
 
-1. En la parte inferior izquierda del portal, cambie a la experiencia **Análisis en tiempo real**.
+1. En la parte inferior izquierda del portal, cambie a la experiencia **Inteligencia en tiempo real**.
 
     ![Captura de pantalla del menú del conmutador de experiencias.](./images/fabric-real-time.png)
 
-    La página principal del análisis en tiempo real incluye iconos para crear activos usados habitualmente para los datos en tiempo real
+    La página principal de Inteligencia en tiempo real incluye iconos para crear activos usados habitualmente para los datos en tiempo real.
 
-2. En la página principal del análisis en tiempo real, cree una nueva **base de datos de KQL** con el nombre que prefiera.
+2. En la página principal de Inteligencia en tiempo real, cree un nuevo **Centro de eventos** con el nombre que prefiera.
 
     ![Captura de pantalla del editor de RTA con la opción Crear base de datos KQL resaltada.](./images/create-kql-db.png)
 
-   Verá una pantalla del panel y, a continuación, seleccionará el botón Base de datos KQL en la parte superior.
-
-    ![Captura de pantalla de una nueva base de datos KQL.](./images/kql-database.png)
-
-    Una vez seleccionado, se le proporcionará un cuadro de diálogo ***Nueva base de datos KQL*** donde asignará un nombre a la base de datos KQL.
-
-    ![Captura de pantalla de un cuadro de diálogo para asignar un nuevo nombre de la base de datos KQL.](./images/name-kql-db.png)
-
-   - Asigne un nombre a la base de datos; en este escenario, es `my_kql_db`.
-   - Haga clic en ***Crear***.
-  
-    Al cabo de un minuto más o menos, se creará una nueva base de datos KQL:
-
-    Actualmente, no hay tablas en la base de datos.
+    El Centro de eventos se usa para agrupar y administrar las bases de datos entre proyectos. Una base de datos KQL vacía se crea automáticamente con el nombre del centro de eventos y agregaremos datos a ella más adelante en este ejercicio.
 
 ## Crear un Eventstream
 
 Los objetos Eventstream proporcionan una manera escalable y flexible de ingerir datos en tiempo real desde un origen de streaming.
 
-1. En la barra de menús de la izquierda, seleccione la página **Inicio** de la experiencia de análisis en tiempo real.
+1. En la barra de menús de la izquierda, seleccione la página **Inicio** de la experiencia de Inteligencia en tiempo real.
 1. En la página principal, seleccione el icono para crear un nuevo objeto **Eventstream** con un nombre de su elección.
 
     Después de un breve tiempo, se muestra el diseñador visual del objeto Eventstream.
@@ -70,11 +57,7 @@ Los objetos Eventstream proporcionan una manera escalable y flexible de ingerir 
 
     ![Captura de pantalla de la vista previa de datos de Eventstream.](./images/eventstream-preview.png)
 
-1. En el lienzo del diseñador, en la lista **Nuevo destino** del destino, seleccione **Base de datos KQL**. A continuación, en el panel **Base de datos KQL**, especifique el nombre de destino **taxi-data** y seleccione el área de trabajo y la base de datos KQL. A continuación, seleccione **Crear y configurar**.
-1. En el Asistente para **ingerir datos**, en la página **Destino**, seleccione **Nueva tabla** y escriba el nombre de tabla **taxi-data**. A continuación, seleccione **Siguiente: Origen**.
-1. En la página **Origen**, revise el nombre de conexión de datos predeterminado y, a continuación, seleccione **Siguiente: Esquema**.
-1. En la página **Esquema**, cambie el **formato de datos** de TXT a **JSON** y revise la vista previa para comprobar que este formato da como resultado varias columnas de datos. A continuación, seleccione **Siguiente: Resumen**.
-1. En la página **Resumen**, espere a que se establezca la ingesta continua y, a continuación, seleccione **Cerrar**.
+1. En el lienzo del diseñador, en la lista **Nuevo destino** del destino, seleccione **Base de datos KQL**. A continuación, en el panel **Base de datos KQL**, especifique el nombre de destino **taxi-data** y seleccione el área de trabajo y la base de datos KQL. Seleccione **Crear nuevo** en Tabla de destino y escriba el nombre de tabla **taxi-data**. Luego, seleccione **Agregar**.
 1. Compruebe que el objeto Eventstream completado tiene este aspecto:
 
     ![Captura de pantalla de un objeto Eventstream completado.](./images/complete-eventstream.png)
