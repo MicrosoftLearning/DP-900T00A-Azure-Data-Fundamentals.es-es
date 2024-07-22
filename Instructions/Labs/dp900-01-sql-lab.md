@@ -4,17 +4,17 @@ lab:
   module: Explore relational data in Azure
 ---
 
-# <a name="explore-azure-sql-database"></a>Exploración de Azure SQL Database
+# Exploración de Azure SQL Database
 
 En este ejercicio, aprovisionará un recurso de Azure SQL Database en la suscripción de Azure y, a continuación, usará SQL para consultar las tablas de una base de datos relacional.
 
 Este laboratorio se tarda aproximadamente **15** minutos en completarse.
 
-## <a name="before-you-start"></a>Antes de empezar
+## Antes de empezar
 
 Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la que tenga acceso de nivel administrativo.
 
-## <a name="provision-an-azure-sql-database-resource"></a>Aprovisionamiento de un recurso de Azure SQL Database
+## Aprovisionamiento de un recurso de Azure SQL Database
 
 1. En [Azure Portal](https://portal.azure.com?azure-portal=true), seleccione **&#65291; Crear un recurso** en la esquina superior izquierda y busque *Azure SQL*. En la página de **Azure SQL** que aparece, seleccione **Crear**.
 
@@ -26,7 +26,7 @@ Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la 
     - **Suscripción**: Seleccione su suscripción a Azure.
     - **Grupo de recursos**: cree un grupo de recursos con el nombre que prefiera.
     - **Nombre de la base de datos**: *AdventureWorks*.
-    -                 **Servidor**: seleccione **Crear nuevo** y cree un servidor con un nombre único en cualquier ubicación disponible. Use la **autenticación de SQL** y especifique su nombre como inicio de sesión de administrador del servidor y una contraseña con una complejidad adecuada (anote la contraseña, ya que la necesitará más adelante).
+    - **Servidor**: seleccione **Crear nuevo** y cree un servidor con un nombre único en cualquier ubicación disponible. Use la **autenticación de SQL** y especifique su nombre como inicio de sesión de administrador del servidor y una contraseña con una complejidad adecuada (anote la contraseña, ya que la necesitará más adelante).
     - **¿Quiere usar un grupo elástico de SQL?**: *No*.
     - **Entorno de la carga de trabajo**: desarrollo
     - **Proceso y almacenamiento**: no lo cambie.
