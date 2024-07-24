@@ -4,7 +4,7 @@ permalink: index.html
 layout: home
 ---
 
-# <a name="azure-data-fundamentals-exercises"></a>Ejercicios de Aspectos básicos de los datos en Microsoft Azure
+# Ejercicios de Aspectos básicos de los datos en Microsoft Azure
 
 Estos ejercicios prácticos están diseñados para admitir contenido de formación de [Microsoft Learn](https://docs.microsoft.com/training/).
 
