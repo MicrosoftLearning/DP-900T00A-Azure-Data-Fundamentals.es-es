@@ -6,42 +6,42 @@ lab:
 
 # Exploración de análisis de datos en Microsoft Fabric
 
-En este ejercicio, explorará la ingesta y el análisis de datos en un almacén de lago de Microsoft Fabric.
+En este ejercicio, explorarás la ingesta y el análisis de datos en un almacén de lago de Microsoft Fabric.
 
 Este laboratorio se tarda aproximadamente **25** minutos en completarse.
 
-> **Nota:** Necesitará una licencia de Microsoft Fabric para realizar este ejercicio. Consulte [Introducción a Fabric](https://learn.microsoft.com/fabric/get-started/fabric-trial) para más información sobre cómo habilitar una licencia de prueba de Fabric gratuita. Para ello, necesitará una cuenta *profesional* o *educativa* de Microsoft. Si no tiene una, puede [registrarse para una evaluación gratuita de Microsoft Office 365 E3 o superior](https://www.microsoft.com/microsoft-365/business/compare-more-office-365-for-business-plans).
+> **Nota**: Necesitarás una licencia de Microsoft Fabric para realizar este ejercicio. Consulta [Introducción a Fabric](https://learn.microsoft.com/fabric/get-started/fabric-trial) para más información sobre cómo habilitar una licencia de prueba de Fabric gratuita. Para ello, necesitarás una cuenta *profesional* o *educativa* de Microsoft. Si no tienes una, puedes [registrarte para una evaluación gratuita de Microsoft Office 365 E3 o superior](https://www.microsoft.com/microsoft-365/business/compare-more-office-365-for-business-plans).
 
-## Crear un área de trabajo
+*La primera vez que uses las características de Microsoft Fabric, pueden aparecer avisos con sugerencias. Descártalos.*
 
-Antes de trabajar con datos de Fabric, cree un área de trabajo con la evaluación gratuita de Fabric habilitada.
+## Creación de un área de trabajo
 
-1. Inicie sesión en [Microsoft Fabric](https://app.fabric.microsoft.com) en `https://app.fabric.microsoft.com`.
-2. En la barra de menús de la izquierda, seleccione **Áreas de trabajo** (el icono tiene un aspecto similar a &#128455;).
-3. Cree una nueva área de trabajo con el nombre que prefiera y seleccione un modo de licencia en la sección **Avanzado** que incluya la capacidad de Fabric (*Prueba*, *Premium* o *Fabric*).
-4. Cuando se abra la nueva área de trabajo, debe estar vacía.
+Antes de trabajar con datos de Fabric, crea un área de trabajo con la evaluación gratuita de Fabric habilitada.
 
-    ![Captura de pantalla de un área de trabajo vacía en Power BI.](./images/new-workspace.png)
-
-## Creación de un almacén de lago
-
-Ahora que tiene un área de trabajo, es el momento de cambiar a la experiencia *Ingeniería de datos* en el portal y crear un almacén de lago de datos para sus archivos de datos.
-
-1. En la parte inferior izquierda del portal, cambie a la experiencia **Ingeniería de datos**.
+1. Inicia sesión en [Microsoft Fabric](https://app.fabric.microsoft.com) en `https://app.fabric.microsoft.com`.
+1. En la parte inferior izquierda del portal, cambia a la experiencia **Ingeniería de datos**.
 
     ![Captura de pantalla del menú del conmutador de experiencias.](./images/fabric-switcher.png)
 
-    La página Inicio de Ingeniería de datos incluye iconos para crear recursos de ingeniería de datos que se usan habitualmente.
+1. En la barra de menús de la izquierda, seleccione **Áreas de trabajo** (el icono tiene un aspecto similar a &#128455;).
+1. Cree una nueva área de trabajo con el nombre que prefiera y seleccione un modo de licencia en la sección **Avanzado** que incluya la capacidad de Fabric (*Prueba*, *Premium* o *Fabric*).
+1. Cuando se abra la nueva área de trabajo, debe estar vacía.
 
-2. En la página Inicio de **Ingeniería de datos**, cree un nuevo **Almacén de lago** con el nombre que prefiera.
+    ![Captura de pantalla de un área de trabajo vacía en Power BI.](./images/new-workspace.png)
+
+## Crear un almacén de lago
+
+Ahora que tienes un área de trabajo, es el momento de crear un almacén de lago de datos para los archivos de datos.
+
+1. En la página principal Ingeniería de datos, crea un nuevo **almacén de lago** con el nombre que prefieras.
 
     Después de un minuto o así, se habrá creado un nuevo almacén de lago:
 
     ![Captura de pantalla de un nuevo almacén de lago.](./images/new-lakehouse.png)
 
-3. Vea el nuevo almacén de lago y tenga en cuenta que el panel **Explorador del almacén de lago** de la izquierda le permite examinar las tablas y los archivos del almacén de lago:
-    - La carpeta **Tablas** contiene tablas que puede consultar usando SQL. Las tablas de un almacén de lago de Microsoft Fabric se basan en el formato de archivo de *Delta Lake* de código abierto, que se usa habitualmente en Apache Spark.
-    - La carpeta **Archivos** contiene archivos de datos del almacenamiento OneLake para el almacén de lago que no están asociados a tablas Delta administradas. También puede crear *accesos directos* en esta carpeta para hacer referencia a datos almacenados externamente.
+1. Mira el nuevo almacén de lago y ten en cuenta que el panel **Explorador del almacén de lago** de la izquierda te permite examinar las tablas y los archivos del almacén de lago:
+    - La carpeta **Tablas** contiene tablas que puedes consultar usando SQL. Las tablas de un almacén de lago de Microsoft Fabric se basan en el formato de archivo de *Delta Lake* de código abierto, que se usa habitualmente en Apache Spark.
+    - La carpeta **Archivos** contiene archivos de datos del almacenamiento OneLake para el almacén de lago que no están asociados a tablas Delta administradas. También puedes crear *accesos directos* en esta carpeta para hacer referencia a datos almacenados externamente.
 
     Actualmente, no hay tablas ni archivos en el almacén de lago.
 
@@ -49,82 +49,77 @@ Ahora que tiene un área de trabajo, es el momento de cambiar a la experiencia *
 
 Una manera sencilla de ingerir datos consiste en usar una actividad **Copiar datos** en una canalización para extraer los datos de un origen y copiarlos en un archivo del almacén de lago.
 
-1. En la página **Inicio** del almacén de lago, en el menú **Obtener datos** seleccione **Nueva canalización de datos** y cree una canalización de datos llamada **Ingerir datos de ventas**.
-1. En el Asistente para **copiar datos**, en la página **Elegir un origen de datos**, seleccione el conjunto de datos de ejemplo **Modelo de datos de minoristas de importadores de todo el mundo**.
+1. En la página **Inicio** del almacén de lago, en el menú **Obtener datos** selecciona **Nueva canalización de datos** y crea una canalización de datos denominada **Ingerir datos**.
+1. En el Asistente para **copiar datos**, en la página **Elegir un origen de datos**, selecciona **Datos de ejemplo** y después selecciona el conjunto de datos de ejemplo **NYC Taxi - Green**.
 
     ![Captura de pantalla de la página "Elegir origen de datos".](./images/choose-data-source.png)
 
-1. Seleccione **Siguiente** y vea las tablas del origen de datos en la página **Conectarse al origen de datos**.
-1. Seleccione la tabla **dimension_stock_item**, que contiene registros de productos. A continuación, seleccione **Siguiente** para avanzar a la página **Elegir destino de datos**.
-1. En la página **Elegir destino de datos**, seleccione su almacén de lago existente. Luego, seleccione **Siguiente**.
-1. Establezca las siguientes opciones de destino de datos y, luego, seleccione **Siguiente**:
+1. Mira las tablas del origen de datos en la página **Conectarse al origen de datos**. Debe haber una tabla que contenga los detalles de los viajes de taxi en la ciudad de Nueva York. A continuación, selecciona **Siguiente** para avanzar a la página **Elegir destino de datos**.
+1. En la página **Elegir destino de datos**, selecciona el almacén de lago existente. Luego, selecciona **Siguiente**.
+1. Establece las siguientes opciones de destino de datos y, luego, selecciona **Siguiente**:
     - **Carpeta raíz**: Tablas
     - **Configuración de carga**: cargar en una nueva tabla
-    - **Nombre de la tabla de destino**: dimension_stock_item
-    - **Asignaciones de columnas**: *deje las asignaciones predeterminadas tal cual*
+    - **Nombre de la tabla de destino**: taxi_rides *(es posible que tengas que esperar a que se muestre la vista previa de las asignaciones de columnas antes de poder cambiarlo)*
+    - **Asignaciones de columnas**: *deja las asignaciones predeterminadas tal cual*
     - **Habilitar partición**: *no seleccionada*
-1. En la página **Revisar y guardar**, asegúrese de que la opción **Iniciar transferencia de datos inmediatamente** esté activa y, a continuación, seleccione **Guardar y ejecutar**.
+1. En la página **Revisar y guardar**, asegúrate de que la opción **Iniciar transferencia de datos inmediatamente** esté activa y después selecciona **Guardar y ejecutar**.
 
     Se crea una nueva canalización que contiene una actividad **Copiar datos**, como se muestra aquí:
 
     ![Captura de pantalla de una canalización con una actividad Copiar datos.](./images/copy-data-pipeline.png)
 
-    Cuando la canalización comienza a ejecutarse, puede supervisar su estado en el panel **Salida** en el diseñador de canalizaciones. Use el icono **&#8635;** (*Actualizar*) para actualizar el estado y espere hasta que la operación se haya realizado correctamente.
+    Cuando la canalización comienza a ejecutarse, puedes supervisar su estado en el panel **Salida** en el diseñador de canalizaciones. Usa el icono **&#8635;** (*Actualizar*) para actualizar el estado y espera hasta que la operación se haya realizado correctamente (puede tardar 10 minutos o más).
 
-1. En la barra de menús central, a la izquierda, seleccione el almacén de lago.
-1. En la página **Inicio**, en el panel **Explorador de almacén de lago**, expanda **Tablas** y compruebe que se ha creado la tabla **dimension_stock_item**.
+1. En la barra de menús central, a la izquierda, selecciona el almacén de lago.
+1. En la página **Inicio**, en el panel **Explorador de almacén de lago**, en el menú **...** del nodo **Tablas**, selecciona **Actualizar** y expande **Tablas** para comprobar que se ha creado la tabla **taxi_rides**.
 
-    > **Nota**: Si la nueva tabla aparece como *no identificada*, use el botón **Actualizar** de la barra de herramientas del almacén de lago para actualizar la vista.
+    > **Nota**: Si la nueva tabla aparece como *no identificada*, usa la opción de menú **Actualizar** para actualizar la vista.
 
-1. Seleccione la tabla **dimension_stock_item** para ver su contenido.
+1. Selecciona la tabla **taxi_rides** para ver su contenido.
 
-    ![Captura de pantalla de la tabla dimension_stock_item.](./images/dimProduct.png)
+    ![Captura de pantalla de la tabla taxi_rides.](./images/dimProduct.png)
 
 ## Consulta de datos en un almacén de lago
 
-Ahora que ha ingerido datos en una tabla de almacén de lago, puede usar SQL para consultarlos.
+Ahora que has ingerido datos en una tabla de almacén de lago, puedes usar SQL para consultarlos.
 
-1. En la parte superior derecha de la página del almacén de lago de datos, cambie al **punto de conexión de análisis SQL** del almacén de lago de datos.
+1. En la parte superior derecha de la página del **almacén de lago**, cambia al **punto de conexión de análisis SQL** del almacén de lago.
 
-    ![Captura de pantalla del menú del punto de conexión de análisis SQL.](./images/endpoint-switcher.png)
-
-1. En la barra de herramientas, seleccione **Nueva consulta SQL**. A continuación, escriba el código SQL siguiente en el editor de consultas:
+1. En la barra de herramientas, selecciona **Nueva consulta SQL**. A continuación, escribe el código SQL siguiente en el editor de consultas:
 
     ```sql
-    SELECT Brand, COUNT(StockItemKey) AS Products
-    FROM dimension_stock_item
-    GROUP BY Brand
+    SELECT  DATENAME(dw,lpepPickupDatetime) AS Day,
+            AVG(tripDistance) As AvgDistance
+    FROM taxi_rides
+    GROUP BY DATENAME(dw,lpepPickupDatetime)
     ```
 
-1. Seleccione el botón **&#9655; Ejecutar** para ejecutar la consulta y revisar los resultados, que deben revelar que hay dos valores de marca (*N/A* y *Northwind*) y mostrar el número de productos en cada uno.
+1. Selecciona el botón **&#9655; Ejecutar** para ejecutar la consulta y revisar los resultados, que deben incluir la distancia media de viaje para cada día de la semana.
 
     ![Captura de pantalla de una consulta SQL.](./images/sql-query.png)
 
 ## Visualización de datos en un almacén de lago
 
-Los almacenes de lago de datos de Microsoft Fabric organizan todas las tablas en un modelo de datos semántico, que puede usar para crear visualizaciones e informes.
+Los almacenes de lago de Microsoft Fabric organizan todas las tablas en un modelo de datos semántico, que puedes usar para crear visualizaciones e informes.
 
-1. En la parte inferior izquierda de la página, en el panel **Explorar**, seleccione la pestaña **Modelo** para ver el modelo de datos de las tablas de un almacén de lago (en este caso solo hay una tabla).
-
-    ![Captura de pantalla de la página del modelo en un almacén de lago de Fabric.](./images/fabric-model.png)
-
-1. En la barra de herramientas, seleccione **Nuevo informe** para abrir una nueva pestaña del explorador que contiene el diseñador de informes de Power BI.
+1. En la parte inferior izquierda de la página, en el panel **Explorar**, selecciona la pestaña **Modelo** para ver el modelo de datos de las tablas de un almacén de lago (esto incluye las tablas del sistema así como la tabla **taxi_rides**).
+1. En la barra de herramientas, selecciona **Nuevo informe** para crear un nuevo informe basado en **taxi_rides**.
 1. En el diseñador de informes:
-    1. En el panel **Datos**, expanda la tabla **dimension_stock_item** y seleccione los campos **Brand** y **StockItemKey**.
-    1. En el panel **Visualizaciones**, seleccione la visualización **Gráfico de barras apiladas** (es la primera que aparece). A continuación, asegúrese de que el **eje Y** contiene el campo **Brand** y cambie la agregación del **eje X** a **Count** para que contenga el campo **Count of StockItemKey**. Por último, cambie el tamaño de la visualización en el lienzo del informe para rellenar el espacio disponible.
+    1. En el panel **Datos**, expande la tabla **taxi_rides** y selecciona los campos **lpepPickupDatetime** y **passengerCount**.
+    1. En el panel **Visualizaciones**, selecciona la visualización **Gráfico de líneas**. A continuación, asegúrate de que el **eje X** contiene el campo **lpepPickupDatetime** y que el **eje Y** contiene **Sum of passengerCount**.
 
         ![Captura de pantalla de un informe de Power BI](./images/fabric-report.png)
 
-    > **Sugerencia**: Puede usar los iconos **>>** para ocultar los paneles del diseñador de informes con el fin de ver el informe con más claridad.
+    > **Sugerencia**: Puedes usar los iconos **>>** para ocultar los paneles del diseñador de informes con el fin de ver el informe con más claridad.
 
-1. En el menú **Archivo**, seleccione **Guardar** para guardar el informe como **Brand Quantity Report** en el área de trabajo de Fabric.
+1. En el menú **Archivo**, selecciona **Guardar** para guardar el informe como **Taxi Rides Report** en el área de trabajo de Fabric.
 
-    Ahora puede cerrar la pestaña del explorador que contiene el informe para volver a su almacén de lago. Puede encontrar el informe en la página del área de trabajo en el portal de Microsoft Fabric.
+    Ahora puedes cerrar la pestaña del explorador que contiene el informe para volver al almacén de lago. Puedes encontrar el informe en la página del área de trabajo en el portal de Microsoft Fabric.
 
 ## Limpieza de recursos
 
-Si ha terminado de explorar Microsoft Fabric, puede eliminar el área de trabajo que creó para este ejercicio.
+Si has terminado de explorar Microsoft Fabric, puedes eliminar el área de trabajo que creaste para este ejercicio.
 
-1. En la barra de la izquierda, seleccione el icono del área de trabajo para ver todos los elementos que contiene.
-2. En el menú **...** de la barra de herramientas, seleccione **Configuración del área de trabajo**.
-3. En la sección **Otros**, seleccione **Quitar esta área de trabajo**.
+1. En la barra de la izquierda, selecciona el icono del área de trabajo para ver todos los elementos que contiene.
+2. En el menú **...** de la barra de herramientas, selecciona **Configuración del área de trabajo**.
+3. En la sección **Otros**, selecciona **Quitar esta área de trabajo**.
