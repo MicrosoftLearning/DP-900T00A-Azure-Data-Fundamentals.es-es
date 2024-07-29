@@ -19,7 +19,7 @@ Este laboratorio se tarda aproximadamente **25** minutos en completarse.
 Antes de trabajar con datos de Fabric, crea un área de trabajo con la evaluación gratuita de Fabric habilitada.
 
 1. Inicia sesión en [Microsoft Fabric](https://app.fabric.microsoft.com) en `https://app.fabric.microsoft.com`.
-1. En la parte inferior izquierda del portal, cambia a la experiencia **Ingeniería de datos**.
+1. En la barra de menús, abajo a la izquierda, cambia a la experiencia **Ingeniería de datos**.
 
     ![Captura de pantalla del menú del conmutador de experiencias.](./images/fabric-switcher.png)
 
@@ -114,7 +114,7 @@ Los almacenes de lago de Microsoft Fabric organizan todas las tablas en un mode
 
 1. En el menú **Archivo**, selecciona **Guardar** para guardar el informe como **Taxi Rides Report** en el área de trabajo de Fabric.
 
-    Ahora puedes cerrar la pestaña del explorador que contiene el informe para volver al almacén de lago. Puedes encontrar el informe en la página del área de trabajo en el portal de Microsoft Fabric.
+    Puedes encontrar el informe en la página del área de trabajo en el portal de Microsoft Fabric.
 
 ## Limpieza de recursos
 
