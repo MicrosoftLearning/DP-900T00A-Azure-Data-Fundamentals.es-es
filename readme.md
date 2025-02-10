@@ -1,3 +1,11 @@
+#README
+
+We've turned off the ability to report issues directly on this repo and do not monitor PRs.
+
+Provide feedback here: https://aka.ms/provide-feedback
+
+Or, if you are a trainer with a microsoft.com email address, please create a ticket in AzDO.
+
 # Aspectos básicos de los datos en Microsoft Azure
 
 Este repositorio contiene los ejercicios de laboratorios para el curso [DP-900  *Fundamentos de Microsoft Azure Data*](https://docs.microsoft.com/en-us/learn/certifications/courses/dp-900t00) y los [módulos de aprendizaje autodirigido de Microsoft Learn](https://docs.microsoft.com/en-us/users/23110622/collections/0kjyh8rn5gdrjj/). Los laboratorios están pensados para complementar los materiales de aprendizaje y permiten practicar el uso de las tecnologías descritas en estos materiales. 
