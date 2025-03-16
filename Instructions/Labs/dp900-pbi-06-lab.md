@@ -10,11 +10,7 @@ En este ejercicio usará Microsoft Power BI Desktop para crear un modelo de dato
 
 Este laboratorio se tarda aproximadamente **20** minutos en completarse.
 
-## Antes de empezar
-
-Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la que tenga acceso de nivel administrativo.
-
-### Instalar Power BI Desktop
+## Instalar Power BI Desktop
 
 Si Microsoft Power BI Desktop no está instalado aún en el equipo de Windows, puede descargarlo e instalarlo de forma gratuita.
 
@@ -86,7 +82,7 @@ Las tres tablas de datos que ha importado se han cargado en un modelo de datos, 
 
     ![Captura de pantalla en la que se muestra cómo cambiar el nombre de la jerarquía en Power BI.](images/rename-hierarchy.png)
 
-1. En el borde izquierdo, seleccione la pestaña **Vista de datos** y, luego, en el panel **Datos**, seleccione la tabla **customers**.
+1. En el borde izquierdo, selecciona la pestaña **Vista de tabla** y, luego, en el panel **Datos**, selecciona la tabla **customers**.
 1. Seleccione el encabezado de columna **Ciudad** y, a continuación, establezca su propiedad **Categoría de datos** en **Ciudad**:
 
     ![Captura de pantalla en la que se muestra cómo establecer una categoría de datos en Power BI.](images/data-category.png)
