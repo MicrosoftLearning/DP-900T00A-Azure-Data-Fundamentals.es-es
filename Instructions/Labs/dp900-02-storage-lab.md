@@ -42,7 +42,7 @@ Ahora que tiene una cuenta de Azure Storage, puede crear un contenedor para los 
     *Si el archivo JSON aparece en el explorador, guarde la página como **product1.json**.*
 
 1. En la página del contenedor de almacenamiento en Azure Portal, en la sección **Almacenamiento de datos** que aparece al lado izquierdo, seleccione **Contenedores**.
-1. En la página **Contenedores**, seleccione **&#65291; Contenedor** y agregue un contenedor nuevo denominado **data** con un nivel de acceso público de **Privado (sin acceso anónimo)** .
+1. En la página **Contenedores**, selecciona **&#65291; Contenedor** y agrega un contenedor nuevo denominado **data** con un nivel de acceso anónimo de **Privado (sin acceso anónimo)**.
 1. Una vez creado el contenedor **data**, compruebe que aparece en la página **Contenedores**.
 1. En la sección superior del panel de la izquierda, seleccione **Explorador de almacenamiento**. En esta página, se proporciona una interfaz basada en explorador que puede utilizar para trabajar con los datos de la cuenta de almacenamiento.
 1. En la página del explorador de almacenamiento, seleccione **Contenedores de blobs** y compruebe que aparece el contenedor **data**.
@@ -66,7 +66,7 @@ Ahora que tiene una cuenta de Azure Storage, puede crear un contenedor para los 
 
 La compatibilidad con Azure Data Lake Store Gen2 le permite usar carpetas jerárquicas para organizar y administrar el acceso a los blobs. También le permite utilizar Azure Blob Storage para hospedar sistemas de archivos distribuidos para plataformas comunes de análisis de macrodatos.
 
-1. Descargue el archivo JSON [product2.json](https://aka.ms/product2.json?azure-portal=true) desde `https://aka.ms/product2.json` y guárdelo en el equipo en la misma carpeta en la que descargó anteriormente **product1.json** (lo cargará en el almacenamiento de blobs más adelante).
+1. Descarga el archivo JSON [product2.json](https://aka.ms/product2.json?azure-portal=true) desde `https://aka.ms/product2.json` y guárdalo en el equipo en la misma carpeta en la que descargaste anteriormente **product1.json**: lo cargarás en el almacenamiento de blobs más adelante.
 1. En la página de la cuenta de almacenamiento en Azure Portal, en el lado izquierdo, desplácese a la sección **Configuración** y seleccione **Actualización de Data Lake Gen2**.
 1. En la página **Actualización de Data Lake Gen2**, expanda y complete cada paso para actualizar la cuenta de almacenamiento a fin de habilitar el espacio de nombres jerárquico y admitir Azure Data Lake Storage Gen2. Esto puede llevar algo de tiempo.
 1. Una vez que se complete la actualización, en la sección superior del panel de la izquierda, seleccione **Explorador de almacenamiento** y navegue de vuelta a la raíz del contenedor de blobs **data**, que todavía contiene la carpeta **product_data**.
@@ -85,6 +85,7 @@ Azure Files proporciona una manera de crear recursos compartidos de archivos bas
 
 1. En la página del contenedor de almacenamiento en Azure Portal, en la sección **Almacenamiento de datos** que aparece al lado izquierdo, seleccione **Recursos compartidos de archivos**.
 1. En la página Recursos compartidos de archivos, seleccione **&#65291; Recurso compartido de archivos** y agregue un recurso compartido de archivos nuevo denominado **files** mediante el nivel **Optimizado para transacciones**.
+2. Selecciona **Siguiente: Copia de seguridad >** y deshabilita la copia de seguridad. A continuación, seleccione **Revisar y crear**.
 1. En los **Recursos compartidos de archivos**, abra el recurso compartido de archivos **files** nuevo.
 1. En la parte superior de la página, seleccione **Conectar**. Luego, en el panel **Conectar**, observe que hay pestañas para los sistemas operativos comunes (Windows, Linux y macOS) que contienen scripts que puede ejecutar para conectarse a la carpeta compartida desde un equipo cliente.
 1. Cierre el panel **Conectar** y, luego, cierre la página **files** para volver a la página **Recursos compartidos de archivos** de la cuenta de Azure Storage.
