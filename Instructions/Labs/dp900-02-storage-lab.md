@@ -19,7 +19,7 @@ Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la 
 El primer paso para usar Azure Storage es aprovisionar una cuenta de Azure Storage en su suscripción de Azure.
 
 1. Si todavía no lo ha hecho, inicie sesión en [Azure Portal](https://portal.azure.com?azure-portal=true).
-1. En la página principal de Azure Portal, seleccione **&#65291; Crear un recurso** en la esquina superior izquierda y busque *Cuenta de almacenamiento*. Luego, en la página **Cuenta de almacenamiento** resultante, seleccione **Crear**.
+1. En la página principal de Azure Portal, selecciona **&#65291; Crear un recurso** en la esquina superior izquierda y busca `Storage account`. Luego, en la página **Cuenta de almacenamiento** resultante, seleccione **Crear**.
 1. Escriba los valores siguientes en la página **Crear una cuenta de almacenamiento**:
     - **Suscripción**: Seleccione su suscripción a Azure.
     - **Grupo de recursos**: cree un grupo de recursos con el nombre que prefiera.
@@ -42,19 +42,19 @@ Ahora que tiene una cuenta de Azure Storage, puede crear un contenedor para los 
     *Si el archivo JSON aparece en el explorador, guarde la página como **product1.json**.*
 
 1. En la página del contenedor de almacenamiento en Azure Portal, en la sección **Almacenamiento de datos** que aparece al lado izquierdo, seleccione **Contenedores**.
-1. En la página **Contenedores**, selecciona **&#65291; Contenedor** y agrega un contenedor nuevo denominado **data** con un nivel de acceso anónimo de **Privado (sin acceso anónimo)**.
+1. En la página **Contenedores**, selecciona **&#65291; Contenedor** y agrega un contenedor nuevo denominado `data` con un nivel de acceso anónimo de **Privado (sin acceso anónimo)**.
 1. Una vez creado el contenedor **data**, compruebe que aparece en la página **Contenedores**.
 1. En la sección superior del panel de la izquierda, seleccione **Explorador de almacenamiento**. En esta página, se proporciona una interfaz basada en explorador que puede utilizar para trabajar con los datos de la cuenta de almacenamiento.
 1. En la página del explorador de almacenamiento, seleccione **Contenedores de blobs** y compruebe que aparece el contenedor **data**.
 1. Seleccione el contenedor **data** y observe que está vacío.
-1. Seleccione **&#65291; Agregar directorio** y lea la información sobre las carpetas antes de crear un directorio denominado **products**.
+1. Selecciona **&#65291; Agregar directorio** y lee la información sobre las carpetas antes de crear un directorio denominado `products`.
 1. En el explorador de almacenamiento, compruebe que la vista actual muestra el contenido de la carpeta **products** que acaba de crear. Observe que las rutas de navegación que se encuentran en la parte superior de la página reflejen la ruta de acceso **Contenedores de blobs > data > products**.
 1. En las rutas de navegación, seleccione **data** para cambiar al contenedor **data** y observe que <u>no</u> contiene ninguna carpeta denominada **products**.
 
     Las carpetas del almacenamiento de blobs son virtuales y solo existen como parte de la ruta de acceso de un blob. Como la carpeta **products** no contiene ningún blob, en realidad no existe.
 
 1. Utilice el botón **&#10514; Cargar** para abrir el panel **Cargar blob**.
-1. En el panel **Cargar blob**, seleccione el archivo **product1.json** que guardó anteriormente en el equipo local. Luego, en la sección **Opciones avanzadas**, en el cuadro **Cargar en carpeta**, escriba **product_data** y seleccione el botón **Cargar**.
+1. En el panel **Cargar blob**, seleccione el archivo **product1.json** que guardó anteriormente en el equipo local. Luego, en la sección **Avanzado**, en el cuadro **Cargar en carpeta**, escribe `product_data` y selecciona el botón **Cargar**.
 1. Cierre el panel **Cargar blob** si todavía está abierto y compruebe que se creó una carpeta virtual denominada **product_data** en el contenedor **data**.
 1. Seleccione la carpeta **product_data** y compruebe que contiene el blob **product1.json** que cargó.
 1. En el lado izquierdo, en la sección **Almacenamiento de datos**, seleccione **Contenedores**.
@@ -84,7 +84,7 @@ La compatibilidad con Azure Data Lake Store Gen2 le permite usar carpetas jerá
 Azure Files proporciona una manera de crear recursos compartidos de archivos basados en la nube.
 
 1. En la página del contenedor de almacenamiento en Azure Portal, en la sección **Almacenamiento de datos** que aparece al lado izquierdo, seleccione **Recursos compartidos de archivos**.
-1. En la página Recursos compartidos de archivos, seleccione **&#65291; Recurso compartido de archivos** y agregue un recurso compartido de archivos nuevo denominado **files** mediante el nivel **Optimizado para transacciones**.
+1. En la página Recursos compartidos de archivos, selecciona **&#65291; Recurso compartido de archivos** y agrega un recurso compartido de archivos nuevo denominado `files` mediante el nivel **Optimizado para transacciones**.
 2. Selecciona **Siguiente: Copia de seguridad >** y deshabilita la copia de seguridad. A continuación, seleccione **Revisar y crear**.
 1. En los **Recursos compartidos de archivos**, abra el recurso compartido de archivos **files** nuevo.
 1. En la parte superior de la página, seleccione **Conectar**. Luego, en el panel **Conectar**, observe que hay pestañas para los sistemas operativos comunes (Windows, Linux y macOS) que contienen scripts que puede ejecutar para conectarse a la carpeta compartida desde un equipo cliente.
@@ -95,7 +95,7 @@ Azure Files proporciona una manera de crear recursos compartidos de archivos bas
 Las tablas de Azure proporcionan un almacén de clave-valor para las aplicaciones que necesitan almacenar valores de datos, pero que no necesitan la funcionalidad y la estructura completas de una base de datos relacional.
 
 1. En la página del contenedor de almacenamiento en Azure Portal, en la sección **Almacenamiento de datos** que aparece al lado izquierdo, seleccione **Tablas**.
-1. En la página **Tablas**, seleccione **&#65291; Tabla** y cree una tabla denominada **products**.
+1. En la página **Tablas**, selecciona **&#65291; Tabla** y crea una nueva tabla denominada `products`.
 1. Una vez que se crea la tabla **products**, en la sección superior del panel de la izquierda, seleccione **Explorador de almacenamiento**.
 1. En el explorador de almacenamiento, seleccione **Tablas** y compruebe que aparece la tabla **products**.
 1. Seleccione la tabla **products**.

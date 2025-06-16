@@ -16,7 +16,7 @@ Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la 
 
 ## Aprovisionamiento de un recurso de Azure SQL Database
 
-1. En [Azure Portal](https://portal.azure.com?azure-portal=true), seleccione **&#65291; Crear un recurso** en la esquina superior izquierda y busque *Azure SQL*. En la página de **Azure SQL** que aparece, seleccione **Crear**.
+1. En [Azure Portal](https://portal.azure.com?azure-portal=true), selecciona **&#65291; Crear un recurso** en la esquina superior izquierda y busca `Azure SQL`. En la página de **Azure SQL** que aparece, seleccione **Crear**.
 
 1. Revise las opciones de Azure SQL disponibles y, luego, en el icono **Bases de datos SQL**, asegúrese de que está seleccionado **Base de datos única** y seleccione **Crear**.
 
@@ -25,7 +25,7 @@ Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la 
 1. Escriba los valores siguientes en la página **Crear base de datos SQL** y deje todas las demás propiedades con su configuración predeterminada:
     - **Suscripción**: Seleccione su suscripción a Azure.
     - **Grupo de recursos**: cree un grupo de recursos con el nombre que prefiera.
-    - **Nombre de la base de datos**: *AdventureWorks*.
+    - **Nombre de base de datos**: `AdventureWorks`
     - **Servidor**: seleccione **Crear nuevo** y cree un servidor con un nombre único en cualquier ubicación disponible. Use la **autenticación de SQL** y especifique su nombre como inicio de sesión de administrador del servidor y una contraseña con una complejidad adecuada (anote la contraseña, ya que la necesitará más adelante).
     - **¿Quiere usar un grupo elástico de SQL?**: *No*.
     - **Entorno de la carga de trabajo**: desarrollo
@@ -46,7 +46,7 @@ Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la 
 
 1. En el panel del lado izquierdo de la página, seleccione **Editor de consultas (versión preliminar)** e inicie sesión con el inicio de sesión de administrador y la contraseña que especificó para el servidor.
     
-    *Si se muestra un mensaje de error que indica que no se permite la dirección IP del cliente, seleccione el vínculo **Allowlist IP…** (IP de la lista de permitidos…) al final del mensaje para permitir el acceso e intente iniciar sesión de nuevo (antes agregó la dirección IP de cliente de su propio equipo a las reglas de firewall, pero el editor de consultas podría conectarse desde otra dirección, en función de la configuración de red).*
+    >**Nota**: si se muestra un mensaje de error que indica que no se permite la dirección IP del cliente, selecciona el vínculo **Lista de direcciones IP permitidas…** al final del mensaje para permitir el acceso e intenta iniciar sesión de nuevo (antes agregaste la dirección IP de cliente de tu propio equipo a las reglas de firewall, pero el editor de consultas podría conectarse desde otra dirección, en función de la configuración de red).
     
     El editor de consultas tiene el aspecto siguiente:
     
@@ -57,7 +57,7 @@ Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la 
 1. En el panel **Consulta 1**, escriba el siguiente código SQL:
 
     ```sql
-    SELECT * FROM SalesLT.Product;
+   SELECT * FROM SalesLT.Product;
     ```
 
 1. Seleccione **&#9655; Ejecutar** encima de la consulta para ejecutarla y ver los resultados, que deberían incluir todas las columnas de todas las filas de la tabla **SalesLT.Product**, tal como se muestra aquí:
@@ -67,18 +67,18 @@ Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la 
 1. Reemplace la instrucción SELECT por el código siguiente y, luego, seleccione **&#9655; Ejecutar** para ejecutar la nueva consulta y revisar los resultados (se incluyen solo las columnas **ProductID**, **Name**, **ListPrice** y **ProductCategoryID**):
 
     ```sql
-    SELECT ProductID, Name, ListPrice, ProductCategoryID
-    FROM SalesLT.Product;
+   SELECT ProductID, Name, ListPrice, ProductCategoryID
+   FROM SalesLT.Product;
     ```
 
 1. Ahora pruebe la consulta siguiente, que usa JOIN para obtener el nombre de categoría de la tabla **SalesLT.ProductCategory**:
 
     ```sql
-    SELECT p.ProductID, p.Name AS ProductName,
-            c.Name AS Category, p.ListPrice
-    FROM SalesLT.Product AS p
-    JOIN [SalesLT].[ProductCategory] AS c
-        ON p.ProductCategoryID = c.ProductCategoryID;
+   SELECT p.ProductID, p.Name AS ProductName,
+           c.Name AS Category, p.ListPrice
+   FROM SalesLT.Product AS p
+   JOIN [SalesLT].[ProductCategory] AS c
+       ON p.ProductCategoryID = c.ProductCategoryID;
     ```
 
 1. Cierre el panel del editor de consultas y descarte las modificaciones.
