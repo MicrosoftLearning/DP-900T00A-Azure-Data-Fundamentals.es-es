@@ -23,7 +23,7 @@ Para usar Azure Synapse Analytics, debe aprovisionar un recurso en el área de t
     > **Sugerencia**: Asegúrese de que está trabajando en el directorio que contiene la suscripción, lo que se indica en la parte superior derecha, debajo del identificador de usuario. Si no es así, seleccione el icono de usuario y cambie el directorio.
 
 2. En la página **Inicio** de Azure Portal, use el icono **&#65291; Crear un recurso** para crear un recurso.
-3. Busque *Azure Synapse Analytics*, y cree un recurso de **Azure Synapse Analytics** con la siguiente configuración:
+3. Busca `Azure Synapse Analytics`, y crea un nuevo recurso de **Azure Synapse Analytics** con la siguiente configuración:
     - **Suscripción**: *suscripción de Azure*
         - **Grupo de recursos**: *cree un grupo de recursos con un nombre apropiado, como "synapse-rg"*.
         - **Grupo de recursos administrado**: *escriba un nombre adecuado, por ejemplo, "synapse-managed-rg"*.
@@ -62,8 +62,8 @@ Una de las tareas clave que puede realizar con Azure Synapse Analytics es defini
 3. En el paso **Origen**, en el subpaso **Conjunto de datos**, seleccione la siguiente configuración:
     - **Tipo de origen**: todos
     - **Conexión**: *cree una conexión y, en el panel **Nueva conexión** que aparece, en la pestaña **Protocolo genérico**, seleccione **HTTP**. Después, continúe y cree una conexión a un archivo de datos mediante la siguiente configuración:*
-        - **Nombre**: productos de AdventureWorks
-        - **Descripción**: lista de productos a través de HTTP
+        - **Nombre**: `AdventureWorks Products`
+        - **Descripción**: `Product list via HTTP`
         - **Conectar mediante Integration Runtime**: AutoResolveIntegrationRuntime
         - **Dirección URL base**: `https://raw.githubusercontent.com/MicrosoftLearning/DP-900T00A-Azure-Data-Fundamentals/master/Azure-Synapse/products.csv`
         - **Validación del certificado de servidor**: habilitar
@@ -120,15 +120,15 @@ Ahora que ha ingerido algunos datos en el área de trabajo, puede usar Synapse A
 2. En el panel **SQL Script 1** (Script SQL 1) que se abre, revise el código SQL que se ha generado, que debe ser similar al siguiente:
 
     ```SQL
-    -- This is auto-generated code
-    SELECT
-        TOP 100 *
-    FROM
-        OPENROWSET(
-            BULK 'https://datalakexx.dfs.core.windows.net/fsxx/products.csv',
-            FORMAT = 'CSV',
-            PARSER_VERSION='2.0'
-        ) AS [result]
+   -- This is auto-generated code
+   SELECT
+       TOP 100 *
+   FROM
+       OPENROWSET(
+           BULK 'https://datalakexx.dfs.core.windows.net/fsxx/products.csv',
+           FORMAT = 'CSV',
+           PARSER_VERSION='2.0'
+       ) AS [result]
     ```
 
     Este código abre un conjunto de filas del archivo de texto que importó y recupera las primeras 100 filas de datos.
@@ -146,15 +146,15 @@ Ahora que ha ingerido algunos datos en el área de trabajo, puede usar Synapse A
 5. Tenga en cuenta que los resultados constan de cuatro columnas denominadas C1, C2, C3 y C4, y que la primera fila de los resultados contiene los nombres de los campos de datos. Para corregir este problema, agregue un parámetro HEADER_ROW = TRUE a la función OPENROWSET tal como se muestra aquí (reemplace *datalakexx* y *fsxx* por los nombres de la cuenta de almacenamiento del lago de datos y el sistema de archivos) y, luego, vuelva a ejecutar la consulta:
 
     ```SQL
-    SELECT
-        TOP 100 *
-    FROM
-        OPENROWSET(
-            BULK 'https://datalakexx.dfs.core.windows.net/fsxx/products.csv',
-            FORMAT = 'CSV',
-            PARSER_VERSION='2.0',
-            HEADER_ROW = TRUE
-        ) AS [result]
+   SELECT
+       TOP 100 *
+   FROM
+       OPENROWSET(
+           BULK 'https://datalakexx.dfs.core.windows.net/fsxx/products.csv',
+           FORMAT = 'CSV',
+           PARSER_VERSION='2.0',
+           HEADER_ROW = TRUE
+       ) AS [result]
     ```
 
     Ahora los resultados son similares a los siguientes:
@@ -168,16 +168,16 @@ Ahora que ha ingerido algunos datos en el área de trabajo, puede usar Synapse A
 6. Modifique la consulta como se muestra a continuación (reemplazando *datalakexx* y *fsxx* por los nombres de la cuenta de almacenamiento de Data Lake y del sistema de archivos):
 
     ```SQL
-    SELECT
-        Category, COUNT(*) AS ProductCount
-    FROM
-        OPENROWSET(
-            BULK 'https://datalakexx.dfs.core.windows.net/fsxx/products.csv',
-            FORMAT = 'CSV',
-            PARSER_VERSION='2.0',
-            HEADER_ROW = TRUE
-        ) AS [result]
-    GROUP BY Category;
+   SELECT
+       Category, COUNT(*) AS ProductCount
+   FROM
+       OPENROWSET(
+           BULK 'https://datalakexx.dfs.core.windows.net/fsxx/products.csv',
+           FORMAT = 'CSV',
+           PARSER_VERSION='2.0',
+           HEADER_ROW = TRUE
+       ) AS [result]
+   GROUP BY Category;
     ```
 
 7. Ejecute la consulta modificada, que debe devolver un conjunto de resultados que contenga el número de productos de cada categoría, de la siguiente forma:
@@ -188,7 +188,7 @@ Ahora que ha ingerido algunos datos en el área de trabajo, puede usar Synapse A
     | Bastidores de bicicletas | 1 |
     | ... | ... |
 
-8. En el panel **Propiedades** de **SQL Script 1** (Script SQL 1), cambie el **Nombre** a **Count Products by Category** (Contar productos por categoría). A continuación, en la barra de herramientas, seleccione **Publicar** para guardar el script.
+8. En el panel **Propiedades** de **SQL Script 1**, cambia el **Nombre** a `Count Products by Category`. A continuación, en la barra de herramientas, seleccione **Publicar** para guardar el script.
 
 9. Cierre el panel de scripts **Count Products by Category** (Contar productos por categoría).
 
@@ -227,15 +227,15 @@ Aunque SQL es un lenguaje común para consultar conjuntos de datos estructurados
 6. Revise solo el código de la primera celda del cuaderno, que debe tener este aspecto:
 
     ```Python
-    %%pyspark
-    df = spark.read.load('abfss://fsxx@datalakexx.dfs.core.windows.net/products.csv', format='csv'
-    ## If header exists uncomment line below
-    ##, header=True
-    )
-    display(df.limit(10))
+   %%pyspark
+   df = spark.read.load('abfss://fsxx@datalakexx.dfs.core.windows.net/products.csv', format='csv'
+   ## If header exists uncomment line below
+   ##, header=True
+   )
+   display(df.limit(10))
     ```
 
-7.  Seleccione el icono **&#9655; Ejecutar** situado a la izquierda de la celda de código para ejecutarlo y espere a obtener los resultados. La primera vez que ejecuta una celda en un cuaderno, se inicia el grupo de Spark, por lo que puede tardar más o menos un minuto en devolver los resultados.
+7. Seleccione el icono **&#9655; Ejecutar** situado a la izquierda de la celda de código para ejecutarlo y espere a obtener los resultados. La primera vez que ejecuta una celda en un cuaderno, se inicia el grupo de Spark, por lo que puede tardar más o menos un minuto en devolver los resultados.
 
     > **Nota**: Si se produce un error porque el kernel de Python aún no está disponible, vuelva a ejecutar la celda.
 
@@ -251,12 +251,12 @@ Aunque SQL es un lenguaje común para consultar conjuntos de datos estructurados
 9. Quite la marca de comentario de la línea *,header=True* (porque el archivo products.csv tiene los encabezados de columna en la primera línea), por lo que el código tiene el siguiente aspecto:
 
     ```Python
-    %%pyspark
-    df = spark.read.load('abfss://fsxx@datalakexx.dfs.core.windows.net/products.csv', format='csv'
-    ## If header exists uncomment line below
-    , header=True
-    )
-    display(df.limit(10))
+   %%pyspark
+   df = spark.read.load('abfss://fsxx@datalakexx.dfs.core.windows.net/products.csv', format='csv'
+   ## If header exists uncomment line below
+   , header=True
+   )
+   display(df.limit(10))
     ```
 
 10. Vuelva a ejecutar la celda y compruebe que los resultados son similares a los siguientes:

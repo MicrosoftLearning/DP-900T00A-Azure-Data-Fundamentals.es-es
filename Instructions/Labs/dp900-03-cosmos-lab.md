@@ -17,9 +17,10 @@ Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la 
 
 Para usar Cosmos DB, debe aprovisionar una cuenta de Cosmos DB en su suscripción de Azure. En este ejercicio, aprovisionará una cuenta de Cosmos DB que usa Azure Cosmos DB for NoSQL.
 
-1. En Azure Portal, seleccione **+ Crear un recurso** en la parte superior izquierda y busque *Azure Cosmos DB*.  En los resultados, seleccione **Azure Cosmos DB** y luego **Crear**.
+1. En Azure Portal, selecciona **+ Crear un recurso** en la parte superior izquierda y busca `Azure Cosmos DB`.  En los resultados, seleccione **Azure Cosmos DB** y luego **Crear**.
 1. En el icono de **Azure Cosmos DB for NoSQL**, seleccione **Crear**.
 1. Escriba los detalles siguientes y seleccione **Revisar y crear**:
+    - **Tipo de carga de trabajo**: Aprendizaje
     - **Suscripción**: si usa un espacio aislado, seleccione la opción *Concierge Subscription* (Suscripción de Concierge). En caso contrario, seleccione su suscripción de Azure.
     - **Grupo de recursos**: si usa un espacio aislado, seleccione el grupo de recursos existente (que tendrá un nombre como *learn-xxxx…* ). De lo contrario, cree un grupo de recursos con el nombre que prefiera.
     - **Nombre de cuenta**: escriba un nombre único
@@ -47,14 +48,14 @@ Para usar Cosmos DB, debe aprovisionar una cuenta de Cosmos DB en su suscripció
 1. Modifique el JSON del nuevo elemento como se muestra a continuación y, posteriormente, seleccione **Guardar**.
 
     ```json
-    {
-        "name": "Road Helmet,45",
-        "id": "123456789",
-        "categoryID": "123456789",
-        "SKU": "AB-1234-56",
-        "description": "The product called \"Road Helmet,45\" ",
-        "price": 48.74
-    }
+   {
+       "name": "Road Helmet,45",
+       "id": "123456789",
+       "categoryID": "123456789",
+       "SKU": "AB-1234-56",
+       "description": "The product called \"Road Helmet,45\" ",
+       "price": 48.74
+   }
     ```
 
 1. Después de guardar el nuevo elemento, observe que las propiedades de metadatos adicionales se agregan automáticamente.
@@ -67,9 +68,9 @@ Para usar Cosmos DB, debe aprovisionar una cuenta de Cosmos DB en su suscripció
 1. Modifique la consulta del siguiente modo:
 
     ```sql
-    SELECT *
-    FROM c
-    WHERE CONTAINS(c.name,"Helmet")
+   SELECT *
+   FROM c
+   WHERE CONTAINS(c.name,"Helmet")
     ```
 
 1. Use el botón **Ejecutar consulta** para ejecutar la consulta revisada y analizar los resultados, lo que incluye las entidades JSON para cualquier elemento con un campo **nombre** que contenga el texto "Helmet".

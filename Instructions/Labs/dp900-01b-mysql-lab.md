@@ -18,7 +18,7 @@ Necesitará una [suscripción de Azure](https://azure.microsoft.com/free) en la 
 
 En este ejercicio, aprovisionará un recurso de Azure Database for MySQL.
 
-1. En Azure Portal, seleccione **&#65291; Crear un recurso** en la esquina superior izquierda y busque *Azure Database for MySQL*. En la página **Azure Database for MySQL** que aparece, seleccione **Crear**.
+1. En Azure Portal, selecciona **&#65291; Crear un recurso** en la esquina superior izquierda y busca `Azure Database for MySQL`. En la página **Azure Database for MySQL** que aparece, seleccione **Crear**.
 
 1. Revise las opciones de Azure Database for MySQL disponibles. Después, en **Tipo de recurso**, seleccione **Servidor flexible** y luego **Crear**.
 
