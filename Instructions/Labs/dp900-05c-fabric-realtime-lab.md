@@ -44,11 +44,11 @@ Ahora estás listo para buscar e ingerir datos en tiempo real desde un origen de
 
    ![Captura de pantalla del lienzo del flujo de eventos.](./images/new-taxi-stream.png)
 
-## Creación de instancia de Eventhouse
+## Creación de instancias de Event house
 
 El flujo de eventos ingiere los datos de existencias en tiempo real, pero actualmente no hace nada con él. Vamos a crear un centro de eventos donde podamos almacenar los datos capturados en una tabla.
 
-1. En la barra de menús de la izquierda, selecciona **Crear**. En la página *Nuevo*, en la sección *Inteligencia en tiempo real*, selecciona **Eventhouse**. Asígnale un nombre único que elijas.
+1. En la barra de menús de la izquierda, selecciona **Crear**. En la página *Nuevo*, en la sección *Inteligencia en tiempo real*, seleccione **Eventhouse**. Asígnale un nombre único que elijas.
 
     >**Nota**: si la opción **Crear** no está anclada a la barra lateral, primero debes seleccionar la opción de puntos suspensivos (**...**).
 
