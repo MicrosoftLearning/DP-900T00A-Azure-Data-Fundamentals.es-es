@@ -68,7 +68,7 @@ Una manera sencilla de ingerir datos consiste en usar una actividad **Copiar dat
 
     ![Captura de pantalla de una canalización con una actividad Copiar datos.](./images/copy-data-pipeline.png)
 
-    Cuando la canalización comienza a ejecutarse, puedes supervisar su estado en el panel **Salida** en el diseñador de canalizaciones. Usa el icono **&#8635;** (*Actualizar*) para actualizar el estado y espera hasta que la operación se haya realizado correctamente (puede tardar 10 minutos o más).
+    Cuando la canalización comienza a ejecutarse, puedes supervisar su estado en el panel **Salida** en el diseñador de canalizaciones. Use el icono **&#8635;** (*Actualizar*) para actualizar el estado y espere hasta que la operación se haya realizado correctamente (puede tardar 10 minutos o más).
 
 1. En la barra de menús central, a la izquierda, selecciona el almacén de lago.
 1. En la página **Inicio**, en el panel **Explorador de almacén de lago**, en el menú **...** del nodo **Tablas**, selecciona **Actualizar** y expande **Tablas** para comprobar que se ha creado la tabla **taxi_rides**.
